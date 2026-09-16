@@ -358,12 +358,12 @@ body {
   color: var(--bull-green);
 }
 
-/* SVG Chart Container */
+/* SVG Chart Container & View Toggles */
 .chart-container {
   background: #FFFFFF;
   border: 1px solid var(--card-border);
   border-radius: 16px;
-  padding: 20px;
+  padding: 16px 20px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -374,10 +374,81 @@ body {
   height: 100%;
 }
 
+.chart-view-toggles {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 10px;
+  align-self: flex-start;
+}
+
+.chart-tab {
+  background: #F1F5F9;
+  border: 1px solid #CBD5E1;
+  border-radius: 14px;
+  padding: 4px 12px;
+  font-family: var(--font-sans);
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--navy-primary);
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.chart-tab:hover {
+  background: #E2E8F0;
+}
+
+.chart-tab.active {
+  background: var(--navy-primary);
+  color: #FFFFFF;
+  border-color: var(--navy-primary);
+}
+
+/* Candlestick Vector Elements */
+.candle-wick {
+  stroke-width: 1.8px;
+  stroke-linecap: round;
+}
+
+.candle-wick.green {
+  stroke: var(--bull-green);
+}
+
+.candle-wick.red {
+  stroke: var(--bear-red);
+}
+
+.candle-body.green {
+  fill: var(--bull-green);
+  stroke: #008A55;
+  stroke-width: 1px;
+}
+
+.candle-body.red {
+  fill: var(--bear-red);
+  stroke: #C53030;
+  stroke-width: 1px;
+}
+
+/* Structural Line Overlay */
+.structure-zigzag {
+  fill: none;
+  stroke: var(--navy-primary);
+  stroke-width: 3.5px;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  filter: drop-shadow(0 2px 5px rgba(13, 31, 60, 0.3));
+}
+
 .chart-legend {
   display: flex;
-  gap: 20px;
-  font-size: 12px;
+  gap: 16px;
+  font-size: 11.5px;
+  font-weight: 600;
+  margin-top: 8px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
   font-weight: 600;
   margin-top: 10px;
 }

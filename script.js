@@ -246,7 +246,34 @@ document.addEventListener('DOMContentLoaded', () => {
     goToSlide(0);
   }
 
-  // Interactive Quiz on Slide 16
+  // Interactive chart display mode: Both (Candles + Line), Candles only, Line only
+  window.setChartMode = function(svgId, mode, btnElement) {
+    const svg = document.getElementById(svgId);
+    if (!svg) return;
+
+    const candles = svg.querySelectorAll('.layer-candlesticks');
+    const line = svg.querySelectorAll('.layer-linegraph');
+
+    if (mode === 'both') {
+      candles.forEach(el => el.style.display = 'block');
+      line.forEach(el => el.style.display = 'block');
+    } else if (mode === 'candles') {
+      candles.forEach(el => el.style.display = 'block');
+      line.forEach(el => el.style.display = 'none');
+    } else if (mode === 'line') {
+      candles.forEach(el => el.style.display = 'none');
+      line.forEach(el => el.style.display = 'block');
+    }
+
+    // Update active tab button style
+    const container = btnElement?.closest('.chart-container');
+    if (container) {
+      container.querySelectorAll('.chart-tab').forEach(btn => btn.classList.remove('active'));
+      if (btnElement) btnElement.classList.add('active');
+    }
+  };
+
+  // Interactive Quiz on Slide 12
   window.toggleInteractiveLayer = function(layerId, btnElement) {
     const layer = document.getElementById(layerId);
     if (!layer) return;
