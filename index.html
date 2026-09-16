@@ -9,7 +9,7 @@
 </head>
 <body>
 
-  <!-- Progress Bar -->
+  <!-- Top Progress Bar -->
   <div class="deck-progress-bar" id="progressBar"></div>
 
   <!-- Main Presentation Viewport -->
@@ -21,25 +21,23 @@
            ========================================== -->
       <section class="slide active" id="slide-1">
         <div class="cover-layout">
-          <div class="cover-logo-wrapper">
-            <img src="assets/logo.png" alt="AUPP Trading Club Logo" class="cover-logo">
-          </div>
+          <img src="assets/logo.png" alt="AUPP Trading Club Logo" class="cover-logo">
           <div class="cover-badge">AUPP Trading Club • Technical Analysis</div>
-          <h1 class="cover-title">Market Structure</h1>
+          <h1 class="cover-title">MARKET STRUCTURE</h1>
           <div class="cover-underline"></div>
           <p class="cover-subtitle">
-            The Basics: Understanding Trends, Swing Points (HH, HL, LH, LL), BOS &amp; Market Structure Shift (MSS)
+            The Foundation of Price Action: Understanding Trends, Swing Points (HH, HL, LH, LL), BOS &amp; Market Structure Shift (MSS)
           </p>
           <div class="cover-footer">
-            <span>Organized by AUPP Trading Club</span>
+            <span>AUPP Trading Club</span>
             <span>•</span>
-            <span>Supported by AUPP</span>
+            <span>American University of Phnom Penh</span>
           </div>
         </div>
         <div class="slide-footer">
           <div class="slide-footer-left">AUPP Trading Club • Beginner Series</div>
           <div class="slide-footer-right">
-            <span>Market Structure Basics</span>
+            <span>Market Structure</span>
             <span class="slide-number-badge">01</span>
           </div>
         </div>
@@ -62,34 +60,92 @@
 
         <div class="content-grid-2">
           <div style="display: flex; flex-direction: column; gap: 18px;">
-            <div class="feature-card accent-top">
-              <div class="card-title">Simple Definition</div>
-              <p class="card-text">
-                <strong>Market Structure</strong> is the behavior, condition, and current flow of the market. It shows the direction price is moving through a series of highs and lows.
+            <div class="clean-card navy-top">
+              <div class="card-title">The Market's Story</div>
+              <p class="card-desc">
+                <strong>Market Structure</strong> is the behavior and direction of price over time. It reveals whether <strong>Buyers (Bulls)</strong> or <strong>Sellers (Bears)</strong> are in control.
               </p>
             </div>
 
             <ul class="clean-list">
-              <li>Price does <strong>never move in a straight line</strong>.</li>
-              <li>Price moves in <strong>waves</strong>: impulses (strong moves) followed by pullbacks (corrections).</li>
-              <li>Reading structure tells you who is in control: <strong>Buyers</strong> or <strong>Sellers</strong>.</li>
+              <li>Price <strong>never moves in a straight line</strong> — it moves in natural waves.</li>
+              <li><strong>Impulse Moves:</strong> Powerful pushes in the direction of the dominant trend.</li>
+              <li><strong>Pullback Moves:</strong> Temporary breathers and retracements before continuation.</li>
             </ul>
 
-            <div class="key-message">
-              <span>Core Rule:</span> "Never trade against the trend. Always align with the market structure."
+            <div class="simple-callout green">
+              <strong>Core Rule:</strong> Never fight the market flow. Always trade in the direction of the structure.
             </div>
           </div>
 
-          <div class="chart-container">
-            <svg viewBox="0 0 500 280" width="100%" height="250">
-              <polyline points="40,240 130,130 190,180 300,70 360,120 460,30" fill="none" stroke="#0D1F3C" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
-              <circle cx="130" cy="130" r="6" fill="#00A868" />
-              <circle cx="190" cy="180" r="6" fill="#00A868" />
-              <circle cx="300" cy="70" r="6" fill="#00A868" />
-              <circle cx="360" cy="120" r="6" fill="#00A868" />
-              <circle cx="460" cy="30" r="6" fill="#00A868" />
-              <text x="250" y="260" font-family="Montserrat" font-size="14" font-weight="700" fill="#0D1F3C" text-anchor="middle">Price Moves in Waves (Impulse &amp; Retracement)</text>
+          <div class="chart-box">
+            <svg viewBox="0 0 500 270" width="100%" height="240">
+              <!-- Background Grid Lines -->
+              <line x1="40" y1="210" x2="460" y2="210" stroke="#F1F5F9" stroke-width="1.5" />
+              <line x1="40" y1="140" x2="460" y2="140" stroke="#F1F5F9" stroke-width="1.5" />
+              <line x1="40" y1="70" x2="460" y2="70" stroke="#F1F5F9" stroke-width="1.5" />
+
+              <!-- Candlesticks forming wave moves -->
+              <!-- Leg 1: Low (y=210) to Peak (y=110) -->
+              <line x1="70" y1="190" x2="70" y2="220" class="candle-wick green" />
+              <rect x="64" y="195" width="12" height="20" rx="1.5" class="candle-body green" />
+
+              <line x1="105" y1="150" x2="105" y2="190" class="candle-wick green" />
+              <rect x="99" y="155" width="12" height="28" rx="1.5" class="candle-body green" />
+
+              <line x1="140" y1="110" x2="140" y2="145" class="candle-wick green" />
+              <rect x="134" y="115" width="12" height="24" rx="1.5" class="candle-body green" />
+
+              <!-- Leg 2: Pullback to Low (y=170) -->
+              <line x1="175" y1="118" x2="175" y2="145" class="candle-wick red" />
+              <rect x="169" y="122" width="12" height="18" rx="1.5" class="candle-body red" />
+
+              <line x1="210" y1="142" x2="210" y2="170" class="candle-wick red" />
+              <rect x="204" y="146" width="12" height="20" rx="1.5" class="candle-body red" />
+
+              <!-- Leg 3: Expansion to Higher Peak (y=50) -->
+              <line x1="245" y1="125" x2="245" y2="160" class="candle-wick green" />
+              <rect x="239" y="130" width="12" height="24" rx="1.5" class="candle-body green" />
+
+              <line x1="280" y1="95" x2="280" y2="130" class="candle-wick green" />
+              <rect x="274" y="100" width="12" height="24" rx="1.5" class="candle-body green" />
+
+              <line x1="315" y1="50" x2="315" y2="85" class="candle-wick green" />
+              <rect x="309" y="55" width="12" height="26" rx="1.5" class="candle-body green" />
+
+              <!-- Leg 4: Pullback to Higher Low (y=120) -->
+              <line x1="350" y1="65" x2="350" y2="95" class="candle-wick red" />
+              <rect x="344" y="70" width="12" height="20" rx="1.5" class="candle-body red" />
+
+              <line x1="385" y1="95" x2="385" y2="125" class="candle-wick red" />
+              <rect x="379" y="100" width="12" height="18" rx="1.5" class="candle-body red" />
+
+              <!-- Leg 5: Continuation Expansion (y=30) -->
+              <line x1="420" y1="65" x2="420" y2="105" class="candle-wick green" />
+              <rect x="414" y="70" width="12" height="28" rx="1.5" class="candle-body green" />
+
+              <line x1="455" y1="30" x2="455" y2="65" class="candle-wick green" />
+              <rect x="449" y="35" width="12" height="25" rx="1.5" class="candle-body green" />
+
+              <!-- Structural Zigzag Line Connecting Swings -->
+              <polyline points="70,210 140,110 210,165 315,50 385,120 455,30" class="zigzag-line" />
+
+              <circle cx="70" cy="210" r="5" fill="#0D1F3C" />
+              <circle cx="140" cy="110" r="5" fill="#0D1F3C" />
+              <circle cx="210" cy="165" r="5" fill="#0D1F3C" />
+              <circle cx="315" cy="50" r="5" fill="#0D1F3C" />
+              <circle cx="385" cy="120" r="5" fill="#0D1F3C" />
+              <circle cx="455" cy="30" r="5" fill="#0D1F3C" />
+
+              <text x="250" y="250" font-family="Montserrat" font-size="13" font-weight="700" fill="#0D1F3C" text-anchor="middle">
+                Waves: Impulses (Push) &amp; Pullbacks (Retracement)
+              </text>
             </svg>
+            <div class="chart-legend-row">
+              <div><span class="legend-dot green"></span> Bullish Candles</div>
+              <div><span class="legend-dot red"></span> Bearish Retracement</div>
+              <div><span class="legend-dot navy"></span> Structural Line Path</div>
+            </div>
           </div>
         </div>
 
@@ -117,52 +173,52 @@
           </div>
         </div>
 
-        <div class="toc-grid">
-          <div class="toc-item">
+        <div class="toc-list-container">
+          <div class="toc-row">
             <div class="toc-num">01</div>
             <div>
-              <div class="toc-title">The 3 Market Trends</div>
-              <div style="font-size: 13px; color: var(--text-muted); margin-top: 4px;">Uptrend, Downtrend, and Sideways (Range)</div>
+              <div class="toc-text">The 3 Market Trends</div>
+              <div style="font-size: 13px; color: var(--text-muted); margin-top: 2px;">Uptrend, Downtrend, and Sideways (Range)</div>
             </div>
           </div>
 
-          <div class="toc-item">
+          <div class="toc-row">
             <div class="toc-num">02</div>
             <div>
-              <div class="toc-title">Identifying Swing Points</div>
-              <div style="font-size: 13px; color: var(--text-muted); margin-top: 4px;">Higher Highs (HH) &amp; Higher Lows (HL)</div>
+              <div class="toc-text">Identifying Bullish Swings</div>
+              <div style="font-size: 13px; color: var(--text-muted); margin-top: 2px;">Higher Highs (HH) &amp; Higher Lows (HL)</div>
             </div>
           </div>
 
-          <div class="toc-item">
+          <div class="toc-row">
             <div class="toc-num">03</div>
             <div>
-              <div class="toc-title">Bearish Swing Points</div>
-              <div style="font-size: 13px; color: var(--text-muted); margin-top: 4px;">Lower Highs (LH) &amp; Lower Lows (LL)</div>
+              <div class="toc-text">Identifying Bearish Swings</div>
+              <div style="font-size: 13px; color: var(--text-muted); margin-top: 2px;">Lower Highs (LH) &amp; Lower Lows (LL)</div>
             </div>
           </div>
 
-          <div class="toc-item">
+          <div class="toc-row">
             <div class="toc-num">04</div>
             <div>
-              <div class="toc-title">Break of Structure (BOS)</div>
-              <div style="font-size: 13px; color: var(--text-muted); margin-top: 4px;">How a trend continues in the same direction</div>
+              <div class="toc-text">Break of Structure (BOS)</div>
+              <div style="font-size: 13px; color: var(--text-muted); margin-top: 2px;">How trends continue in the same direction</div>
             </div>
           </div>
 
-          <div class="toc-item">
+          <div class="toc-row">
             <div class="toc-num">05</div>
             <div>
-              <div class="toc-title">Market Structure Shift (MSS)</div>
-              <div style="font-size: 13px; color: var(--text-muted); margin-top: 4px;">How a trend reverses and changes direction</div>
+              <div class="toc-text">Market Structure Shift (MSS)</div>
+              <div style="font-size: 13px; color: var(--text-muted); margin-top: 2px;">How trends reverse and change direction</div>
             </div>
           </div>
 
-          <div class="toc-item">
+          <div class="toc-row">
             <div class="toc-num">06</div>
             <div>
-              <div class="toc-title">Practice &amp; Summary</div>
-              <div style="font-size: 13px; color: var(--text-muted); margin-top: 4px;">Interactive chart practice &amp; Q&amp;A</div>
+              <div class="toc-text">Practice &amp; Summary</div>
+              <div style="font-size: 13px; color: var(--text-muted); margin-top: 2px;">Interactive chart practice &amp; Q&amp;A</div>
             </div>
           </div>
         </div>
@@ -183,7 +239,7 @@
         <div class="slide-header">
           <div class="slide-title-group">
             <div class="slide-pretitle">Notice</div>
-            <h2 class="slide-title">⚠️ Disclaimer — AUPP Trading Club</h2>
+            <h2 class="slide-title">Educational Disclaimer</h2>
             <div class="title-underline"></div>
           </div>
           <div class="slide-header-brand">
@@ -191,20 +247,27 @@
           </div>
         </div>
 
-        <div style="display: flex; flex-direction: column; gap: 18px; font-size: 15px; line-height: 1.7; color: #2D3748;">
-          <p>
-            The <strong>AUPP Trading Club</strong> provides educational content, examples, and discussions for learning purposes only. We do not guarantee profits or provide financial advice.
-          </p>
-          <div style="background: #F8FAFC; border: 1px solid var(--card-border); border-radius: 12px; padding: 20px 24px;">
-            <ul class="clean-list">
-              <li><strong>We teach</strong> — we do not trade on your behalf.</li>
-              <li>Trading financial markets involves risk of capital loss.</li>
-              <li>Never trade with real money that you cannot afford to lose.</li>
-              <li>Learn, practice on demo, and manage risk with discipline.</li>
+        <div style="display: flex; flex-direction: column; justify-content: center; align-items: center; height: 100%;">
+          <div class="clean-card" style="max-width: 800px; width: 100%; padding: 40px;">
+            <div style="display: flex; align-items: center; gap: 14px; margin-bottom: 20px;">
+              <span class="badge red">NOTICE</span>
+              <div style="font-size: 17px; font-weight: 700; color: var(--navy-primary);">AUPP Trading Club Policy</div>
+            </div>
+
+            <p style="font-size: 15.5px; line-height: 1.7; color: var(--text-dark); margin-bottom: 20px;">
+              The <strong>AUPP Trading Club</strong> is an educational university organization. All slides, charts, and materials are prepared solely for educational and simulation purposes.
+            </p>
+
+            <ul class="clean-list" style="margin-bottom: 24px;">
+              <li><strong>We educate</strong> — we do not offer financial advice or trade with student funds.</li>
+              <li>Trading real financial markets carries significant risk of capital loss.</li>
+              <li>Always master your analysis on a <strong>demo account</strong> before using real capital.</li>
+              <li>Risk management and emotional discipline are the key to long-term success.</li>
             </ul>
-          </div>
-          <div style="text-align: right; font-weight: 700; color: var(--navy-primary);">
-            — The AUPP Trading Club
+
+            <div style="text-align: right; font-weight: 700; color: var(--navy-primary); font-size: 14px;">
+              — AUPP Trading Club Executive Committee
+            </div>
           </div>
         </div>
 
@@ -234,44 +297,47 @@
 
         <div class="content-grid-3">
           <!-- 1. Uptrend -->
-          <div class="feature-card green-top">
-            <div class="card-number-badge" style="color: var(--bull-green);">01</div>
+          <div class="clean-card green-top">
+            <div class="card-num" style="color: var(--bull-green);">01</div>
             <div class="card-title">Uptrend (Bullish)</div>
-            <p class="card-text" style="margin-bottom: 12px;">
-              Price is moving <strong>UPWARDS</strong>. Buyers are stronger than sellers.
+            <p class="card-desc" style="margin-bottom: 16px;">
+              Price is moving <strong>UPWARDS</strong>. Buyers are firmly in control.
             </p>
-            <div style="background: #E6F7F0; border-radius: 8px; padding: 10px 14px; font-size: 13.5px; font-weight: 600; color: var(--bull-green);">
-              Pattern: Higher Highs (HH) &amp; Higher Lows (HL)
+            <div class="badge green" style="align-self: flex-start; margin-bottom: 12px;">Higher Highs &amp; Higher Lows</div>
+            <div style="font-size: 13.5px; color: var(--text-dark); font-weight: 600;">
+              Trading Bias: <strong>Look for BUY setups</strong>
             </div>
           </div>
 
           <!-- 2. Downtrend -->
-          <div class="feature-card accent-top">
-            <div class="card-number-badge" style="color: var(--bear-red);">02</div>
+          <div class="clean-card red-top">
+            <div class="card-num" style="color: var(--bear-red);">02</div>
             <div class="card-title">Downtrend (Bearish)</div>
-            <p class="card-text" style="margin-bottom: 12px;">
-              Price is moving <strong>DOWNWARDS</strong>. Sellers are stronger than buyers.
+            <p class="card-desc" style="margin-bottom: 16px;">
+              Price is moving <strong>DOWNWARDS</strong>. Sellers are firmly in control.
             </p>
-            <div style="background: #FEE2E2; border-radius: 8px; padding: 10px 14px; font-size: 13.5px; font-weight: 600; color: var(--bear-red);">
-              Pattern: Lower Highs (LH) &amp; Lower Lows (LL)
+            <div class="badge red" style="align-self: flex-start; margin-bottom: 12px;">Lower Highs &amp; Lower Lows</div>
+            <div style="font-size: 13.5px; color: var(--text-dark); font-weight: 600;">
+              Trading Bias: <strong>Look for SELL setups</strong>
             </div>
           </div>
 
           <!-- 3. Sideways -->
-          <div class="feature-card navy-top">
-            <div class="card-number-badge" style="color: var(--navy-primary);">03</div>
+          <div class="clean-card navy-top">
+            <div class="card-num" style="color: var(--navy-primary);">03</div>
             <div class="card-title">Sideways (Range)</div>
-            <p class="card-text" style="margin-bottom: 12px;">
-              Price moves <strong>HORIZONTAL</strong> between support and resistance.
+            <p class="card-desc" style="margin-bottom: 16px;">
+              Price is moving <strong>SIDEWAYS</strong> between Support and Resistance.
             </p>
-            <div style="background: #EDF2F7; border-radius: 8px; padding: 10px 14px; font-size: 13.5px; font-weight: 600; color: var(--navy-primary);">
-              Pattern: Equal Highs (EQH) &amp; Equal Lows (EQL)
+            <div class="badge navy" style="align-self: flex-start; margin-bottom: 12px;">Equal Highs &amp; Equal Lows</div>
+            <div style="font-size: 13.5px; color: var(--text-dark); font-weight: 600;">
+              Trading Bias: <strong>Wait for clear breakout</strong>
             </div>
           </div>
         </div>
 
-        <div class="callout-box" style="margin-top: 24px;">
-          <strong>Quick Rule:</strong> In an <em>Uptrend</em>, we look for <strong>Buys</strong>. In a <em>Downtrend</em>, we look for <strong>Sells</strong>. In a <em>Range</em>, we wait for a breakout.
+        <div class="simple-callout" style="margin-top: 24px;">
+          <strong>Quick Summary:</strong> In an Uptrend, buy the dips. In a Downtrend, sell the rallies. In a Range, stay patient.
         </div>
 
         <div class="slide-footer">
@@ -300,50 +366,58 @@
 
         <div class="content-grid-2">
           <!-- Bullish Swings -->
-          <div style="display: flex; flex-direction: column; gap: 16px;">
-            <div class="feature-card green-top">
-              <div class="card-title" style="color: var(--bull-green);">Bullish Swings</div>
-              
-              <div style="margin-bottom: 12px;">
-                <span class="badge green">HH</span> <strong>Higher High</strong>
-                <p style="font-size: 14px; color: var(--text-muted); margin-top: 4px;">
-                  A peak that is <strong>higher</strong> than the previous peak.
-                </p>
-              </div>
+          <div class="clean-card green-top" style="gap: 20px;">
+            <div class="card-title" style="color: var(--bull-green); font-size: 20px;">Bullish Swing Points</div>
 
-              <div>
-                <span class="badge green">HL</span> <strong>Higher Low</strong>
-                <p style="font-size: 14px; color: var(--text-muted); margin-top: 4px;">
-                  A pullback low that stays <strong>higher</strong> than the previous low.
-                </p>
+            <div>
+              <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 4px;">
+                <span class="badge green">HH</span>
+                <strong style="font-size: 16px; color: var(--navy-primary);">Higher High</strong>
               </div>
+              <p class="card-desc">
+                A price peak that rises higher than the preceding peak. Shows strong buying momentum.
+              </p>
+            </div>
+
+            <div>
+              <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 4px;">
+                <span class="badge green">HL</span>
+                <strong style="font-size: 16px; color: var(--navy-primary);">Higher Low</strong>
+              </div>
+              <p class="card-desc">
+                A pullback valley that stays higher than the preceding valley. Shows buyers defending price.
+              </p>
             </div>
           </div>
 
           <!-- Bearish Swings -->
-          <div style="display: flex; flex-direction: column; gap: 16px;">
-            <div class="feature-card accent-top">
-              <div class="card-title" style="color: var(--bear-red);">Bearish Swings</div>
-              
-              <div style="margin-bottom: 12px;">
-                <span class="badge red">LH</span> <strong>Lower High</strong>
-                <p style="font-size: 14px; color: var(--text-muted); margin-top: 4px;">
-                  A bounce peak that is <strong>lower</strong> than the previous peak.
-                </p>
-              </div>
+          <div class="clean-card red-top" style="gap: 20px;">
+            <div class="card-title" style="color: var(--bear-red); font-size: 20px;">Bearish Swing Points</div>
 
-              <div>
-                <span class="badge red">LL</span> <strong>Lower Low</strong>
-                <p style="font-size: 14px; color: var(--text-muted); margin-top: 4px;">
-                  A valley that drops <strong>lower</strong> than the previous valley.
-                </p>
+            <div>
+              <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 4px;">
+                <span class="badge red">LH</span>
+                <strong style="font-size: 16px; color: var(--navy-primary);">Lower High</strong>
               </div>
+              <p class="card-desc">
+                A relief bounce peak that fails to reach the preceding peak. Shows weak buyers.
+              </p>
+            </div>
+
+            <div>
+              <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 4px;">
+                <span class="badge red">LL</span>
+                <strong style="font-size: 16px; color: var(--navy-primary);">Lower Low</strong>
+              </div>
+              <p class="card-desc">
+                A drop that plummets lower than the preceding valley. Shows aggressive selling pressure.
+              </p>
             </div>
           </div>
         </div>
 
-        <div class="key-message" style="margin-top: 24px;">
-          <span>Summary:</span> Uptrend = <strong>HH + HL</strong> &nbsp;|&nbsp; Downtrend = <strong>LH + LL</strong>. Master these 4 abbreviations!
+        <div class="simple-callout navy" style="margin-top: 24px;">
+          <strong>Cheat Sheet:</strong> Uptrend = <strong>HH + HL</strong> &nbsp;|&nbsp; Downtrend = <strong>LH + LL</strong>. Always mark these 4 points on your chart!
         </div>
 
         <div class="slide-footer">
@@ -371,168 +445,121 @@
         </div>
 
         <div class="content-grid-2">
-          <div style="display: flex; flex-direction: column; gap: 16px;">
-            <div class="feature-card green-top">
+          <div style="display: flex; flex-direction: column; gap: 18px;">
+            <div class="clean-card green-top">
               <div class="card-title">How to Spot an Uptrend</div>
-              <p class="card-text">
-                Every new push creates a <strong>Higher High (HH)</strong>, and every pullback stops above the previous low to form a <strong>Higher Low (HL)</strong>.
+              <p class="card-desc">
+                An uptrend is characterized by a series of consecutive <strong>Higher Highs (HH)</strong> and <strong>Higher Lows (HL)</strong>.
               </p>
             </div>
 
             <ul class="clean-list green">
-              <li>Price creates: Low → High → <strong>HL</strong> → <strong>HH</strong> → <strong>HL</strong> → <strong>HH</strong>.</li>
-              <li>As long as price stays above the recent Higher Low, the uptrend is <strong>HEALTHY</strong>.</li>
-              <li><strong>Traders look to buy at the Higher Low (pullback)</strong>, not at the top of the Higher High.</li>
+              <li>Each new push climbs above the previous peak (forming a new <strong>HH</strong>).</li>
+              <li>Each pullback pauses above the previous low (forming a safe <strong>HL</strong>).</li>
+              <li><strong>Pro Trader Tip:</strong> Look to buy at the <em>Higher Low (pullback)</em>, never FOMO buy at the peak of a Higher High.</li>
             </ul>
+
+            <div class="simple-callout green">
+              <strong>Healthy Trend Rule:</strong> As long as price stays above the most recent Higher Low, the uptrend is valid and healthy.
+            </div>
           </div>
 
-          <div class="chart-container">
-            <div class="chart-view-toggles">
-              <button class="chart-tab active" onclick="setChartMode('chart-uptrend', 'both', this)">Both (Candles + Line)</button>
-              <button class="chart-tab" onclick="setChartMode('chart-uptrend', 'candles', this)">Candlesticks</button>
-              <button class="chart-tab" onclick="setChartMode('chart-uptrend', 'line', this)">Line Only</button>
-            </div>
+          <div class="chart-box">
+            <svg viewBox="0 0 520 280" width="100%" height="245">
+              <!-- Grid Lines -->
+              <line x1="30" y1="230" x2="490" y2="230" stroke="#F1F5F9" stroke-width="1.5" />
+              <line x1="30" y1="150" x2="490" y2="150" stroke="#F1F5F9" stroke-width="1.5" />
+              <line x1="30" y1="70" x2="490" y2="70" stroke="#F1F5F9" stroke-width="1.5" />
 
-            <svg id="chart-uptrend" viewBox="0 0 520 290" width="100%" height="250">
-              <!-- Grid lines -->
-              <line x1="40" y1="240" x2="480" y2="240" stroke="#F1F5F9" stroke-width="1.5" />
-              <line x1="40" y1="160" x2="480" y2="160" stroke="#F1F5F9" stroke-width="1.5" />
-              <line x1="40" y1="80" x2="480" y2="80" stroke="#F1F5F9" stroke-width="1.5" />
+              <!-- CANDLESTICKS LAYER -->
+              <!-- Leg 1: Low (y=230) to High (y=130) -->
+              <line x1="50" y1="205" x2="50" y2="235" class="candle-wick green" />
+              <rect x="44" y="210" width="12" height="20" rx="1.5" class="candle-body green" />
 
-              <!-- LAYER 1: CANDLESTICKS -->
-              <g class="layer-candlesticks">
-                <!-- Leg 1: Low (y=245) to High (y=140) -->
-                <!-- C1 (x=50): Green -->
-                <line x1="50" y1="215" x2="50" y2="245" class="candle-wick green" />
-                <rect x="44" y="220" width="12" height="20" rx="1.5" class="candle-body green" />
+              <line x1="72" y1="175" x2="72" y2="215" class="candle-wick green" />
+              <rect x="66" y="180" width="12" height="30" rx="1.5" class="candle-body green" />
 
-                <!-- C2 (x=70): Green -->
-                <line x1="70" y1="185" x2="70" y2="225" class="candle-wick green" />
-                <rect x="64" y="190" width="12" height="30" rx="1.5" class="candle-body green" />
+              <line x1="94" y1="150" x2="94" y2="185" class="candle-wick green" />
+              <rect x="88" y="155" width="12" height="25" rx="1.5" class="candle-body green" />
 
-                <!-- C3 (x=90): Red -->
-                <line x1="90" y1="180" x2="90" y2="200" class="candle-wick red" />
-                <rect x="84" y="185" width="12" height="12" rx="1.5" class="candle-body red" />
+              <line x1="116" y1="130" x2="116" y2="160" class="candle-wick green" />
+              <rect x="110" y="135" width="12" height="20" rx="1.5" class="candle-body green" />
 
-                <!-- C4 (x=110): Green -->
-                <line x1="110" y1="155" x2="110" y2="195" class="candle-wick green" />
-                <rect x="104" y="160" width="12" height="30" rx="1.5" class="candle-body green" />
+              <!-- Leg 2: Pullback to HL 1 (y=185) -->
+              <line x1="140" y1="135" x2="140" y2="165" class="candle-wick red" />
+              <rect x="134" y="138" width="12" height="20" rx="1.5" class="candle-body red" />
 
-                <!-- C5 (x=130): Green High Peak -->
-                <line x1="130" y1="140" x2="130" y2="170" class="candle-wick green" />
-                <rect x="124" y="145" width="12" height="20" rx="1.5" class="candle-body green" />
+              <line x1="162" y1="155" x2="162" y2="185" class="candle-wick red" />
+              <rect x="156" y="158" width="12" height="22" rx="1.5" class="candle-body red" />
 
-                <!-- Leg 2: Pullback to HL 1 (y=198) -->
-                <!-- C6 (x=152): Red -->
-                <line x1="152" y1="142" x2="152" y2="170" class="candle-wick red" />
-                <rect x="146" y="146" width="12" height="20" rx="1.5" class="candle-body red" />
+              <line x1="184" y1="165" x2="184" y2="188" class="candle-wick green" />
+              <rect x="178" y="168" width="12" height="12" rx="1.5" class="candle-body green" />
 
-                <!-- C7 (x=174): Red -->
-                <line x1="174" y1="162" x2="174" y2="188" class="candle-wick red" />
-                <rect x="168" y="166" width="12" height="18" rx="1.5" class="candle-body red" />
+              <!-- Leg 3: Expansion to HH 1 (y=90) -->
+              <line x1="208" y1="140" x2="208" y2="175" class="candle-wick green" />
+              <rect x="202" y="145" width="12" height="25" rx="1.5" class="candle-body green" />
 
-                <!-- C8 (x=196): Green Hammer (HL 1) -->
-                <line x1="196" y1="172" x2="196" y2="198" class="candle-wick green" />
-                <rect x="190" y="174" width="12" height="10" rx="1.5" class="candle-body green" />
+              <line x1="232" y1="110" x2="232" y2="150" class="candle-wick green" />
+              <rect x="226" y="115" width="12" height="30" rx="1.5" class="candle-body green" />
 
-                <!-- Leg 3: Expansion to HH 1 (y=95) + BOS -->
-                <!-- C9 (x=218): Green -->
-                <line x1="218" y1="148" x2="218" y2="180" class="candle-wick green" />
-                <rect x="212" y="152" width="12" height="24" rx="1.5" class="candle-body green" />
+              <line x1="256" y1="90" x2="256" y2="120" class="candle-wick green" />
+              <rect x="250" y="95" width="12" height="20" rx="1.5" class="candle-body green" />
 
-                <!-- C10 (x=240): Green (BOS candle closes above y=140) -->
-                <line x1="240" y1="120" x2="240" y2="155" class="candle-wick green" />
-                <rect x="234" y="125" width="12" height="26" rx="1.5" class="candle-body green" />
+              <!-- Leg 4: Pullback to HL 2 (y=145) -->
+              <line x1="280" y1="95" x2="280" y2="125" class="candle-wick red" />
+              <rect x="274" y="98" width="12" height="20" rx="1.5" class="candle-body red" />
 
-                <!-- C11 (x=262): Green -->
-                <line x1="262" y1="105" x2="262" y2="130" class="candle-wick green" />
-                <rect x="256" y="110" width="12" height="16" rx="1.5" class="candle-body green" />
+              <line x1="304" y1="118" x2="304" y2="148" class="candle-wick red" />
+              <rect x="298" y="122" width="12" height="20" rx="1.5" class="candle-body red" />
 
-                <!-- C12 (x=284): Green HH 1 Peak -->
-                <line x1="284" y1="95" x2="284" y2="120" class="candle-wick green" />
-                <rect x="278" y="100" width="12" height="16" rx="1.5" class="candle-body green" />
+              <line x1="328" y1="128" x2="328" y2="148" class="candle-wick green" />
+              <rect x="322" y="130" width="12" height="12" rx="1.5" class="candle-body green" />
 
-                <!-- Leg 4: Pullback to HL 2 (y=150) -->
-                <!-- C13 (x=306): Red -->
-                <line x1="306" y1="98" x2="306" y2="125" class="candle-wick red" />
-                <rect x="300" y="102" width="12" height="20" rx="1.5" class="candle-body red" />
+              <!-- Leg 5: Expansion to HH 2 (y=45) -->
+              <line x1="352" y1="102" x2="352" y2="135" class="candle-wick green" />
+              <rect x="346" y="106" width="12" height="24" rx="1.5" class="candle-body green" />
 
-                <!-- C14 (x=328): Red -->
-                <line x1="328" y1="118" x2="328" y2="145" class="candle-wick red" />
-                <rect x="322" y="122" width="12" height="20" rx="1.5" class="candle-body red" />
+              <line x1="376" y1="75" x2="376" y2="110" class="candle-wick green" />
+              <rect x="370" y="80" width="12" height="25" rx="1.5" class="candle-body green" />
 
-                <!-- C15 (x=350): Green Hammer (HL 2) -->
-                <line x1="350" y1="130" x2="350" y2="150" class="candle-wick green" />
-                <rect x="344" y="132" width="12" height="10" rx="1.5" class="candle-body green" />
+              <line x1="400" y1="45" x2="400" y2="80" class="candle-wick green" />
+              <rect x="394" y="50" width="12" height="25" rx="1.5" class="candle-body green" />
 
-                <!-- Leg 5: Expansion to HH 2 (y=50) -->
-                <!-- C16 (x=372): Green -->
-                <line x1="372" y1="108" x2="372" y2="135" class="candle-wick green" />
-                <rect x="366" y="112" width="12" height="20" rx="1.5" class="candle-body green" />
+              <!-- Dotted BOS Breakout Lines -->
+              <line x1="116" y1="130" x2="256" y2="130" stroke="#00A868" stroke-width="1.5" stroke-dasharray="4 3" />
+              <line x1="256" y1="90" x2="400" y2="90" stroke="#00A868" stroke-width="1.5" stroke-dasharray="4 3" />
 
-                <!-- C17 (x=394): Green (BOS candle closes above y=95) -->
-                <line x1="394" y1="82" x2="394" y2="114" class="candle-wick green" />
-                <rect x="388" y="86" width="12" height="24" rx="1.5" class="candle-body green" />
+              <!-- STRUCTURAL LINE OVERLAY -->
+              <polyline points="50,230 116,130 184,185 256,90 328,145 400,45" class="zigzag-line" />
 
-                <!-- C18 (x=416): Green -->
-                <line x1="416" y1="65" x2="416" y2="92" class="candle-wick green" />
-                <rect x="410" y="70" width="12" height="18" rx="1.5" class="candle-body green" />
+              <!-- Swing Points Labels -->
+              <circle cx="50" cy="230" r="5" fill="#00A868" />
+              <text x="50" y="252" font-family="Montserrat" font-size="11" font-weight="700" fill="#0D1F3C" text-anchor="middle">Low</text>
 
-                <!-- C19 (x=438): Green HH 2 Peak -->
-                <line x1="438" y1="50" x2="438" y2="76" class="candle-wick green" />
-                <rect x="432" y="55" width="12" height="16" rx="1.5" class="candle-body green" />
-              </g>
+              <circle cx="116" cy="130" r="5" fill="#00A868" />
+              <text x="116" y="115" font-family="Montserrat" font-size="11" font-weight="700" fill="#0D1F3C" text-anchor="middle">High</text>
 
-              <!-- LAYER 2: STRUCTURAL LINE GRAPH OVERLAY -->
-              <g class="layer-linegraph">
-                <!-- Trend Trajectory Line -->
-                <line x1="50" y1="230" x2="440" y2="60" stroke="#00A868" stroke-width="1.8" stroke-dasharray="5 4" />
+              <circle cx="184" cy="185" r="5.5" fill="#00A868" stroke="#FFFFFF" stroke-width="1.5" />
+              <rect x="164" y="196" width="40" height="18" rx="4" fill="#E6F7F0" stroke="#00A868" stroke-width="1.2" />
+              <text x="184" y="209" font-family="Montserrat" font-size="10" font-weight="800" fill="#00A868" text-anchor="middle">HL 1</text>
 
-                <!-- Dotted BOS breakout horizontal lines -->
-                <line x1="130" y1="140" x2="284" y2="140" stroke="#00A868" stroke-width="1.5" stroke-dasharray="4 3" />
-                <text x="210" y="134" font-family="Montserrat" font-size="10" font-weight="700" fill="#00A868">BOS ✓</text>
+              <circle cx="256" cy="90" r="5.5" fill="#00A868" stroke="#FFFFFF" stroke-width="1.5" />
+              <rect x="236" y="62" width="40" height="18" rx="4" fill="#E6F7F0" stroke="#00A868" stroke-width="1.2" />
+              <text x="256" y="75" font-family="Montserrat" font-size="10" font-weight="800" fill="#00A868" text-anchor="middle">HH 1</text>
 
-                <line x1="284" y1="95" x2="438" y2="95" stroke="#00A868" stroke-width="1.5" stroke-dasharray="4 3" />
-                <text x="365" y="89" font-family="Montserrat" font-size="10" font-weight="700" fill="#00A868">BOS ✓</text>
+              <circle cx="328" cy="145" r="5.5" fill="#00A868" stroke="#FFFFFF" stroke-width="1.5" />
+              <rect x="308" y="156" width="40" height="18" rx="4" fill="#E6F7F0" stroke="#00A868" stroke-width="1.2" />
+              <text x="328" y="169" font-family="Montserrat" font-size="10" font-weight="800" fill="#00A868" text-anchor="middle">HL 2</text>
 
-                <!-- Zigzag line connecting swing points -->
-                <polyline points="50,245 130,140 196,198 284,95 350,150 438,50" class="structure-zigzag" />
-
-                <!-- Nodes & Badges -->
-                <!-- Low -->
-                <circle cx="50" cy="245" r="5" fill="#00A868" />
-                <text x="50" y="266" font-family="Montserrat" font-size="11" font-weight="700" fill="#0D1F3C" text-anchor="middle">Low</text>
-
-                <!-- High -->
-                <circle cx="130" cy="140" r="5" fill="#00A868" />
-                <text x="130" y="126" font-family="Montserrat" font-size="11" font-weight="700" fill="#0D1F3C" text-anchor="middle">High</text>
-
-                <!-- HL 1 -->
-                <circle cx="196" cy="198" r="6" fill="#00A868" stroke="#FFFFFF" stroke-width="1.5" />
-                <rect x="174" y="210" width="44" height="20" rx="4" fill="#E6F7F0" stroke="#00A868" stroke-width="1.5" />
-                <text x="196" y="224" font-family="Montserrat" font-size="10" font-weight="800" fill="#00A868" text-anchor="middle">HL 1</text>
-
-                <!-- HH 1 -->
-                <circle cx="284" cy="95" r="6" fill="#00A868" stroke="#FFFFFF" stroke-width="1.5" />
-                <rect x="262" y="65" width="44" height="20" rx="4" fill="#E6F7F0" stroke="#00A868" stroke-width="1.5" />
-                <text x="284" y="79" font-family="Montserrat" font-size="10" font-weight="800" fill="#00A868" text-anchor="middle">HH 1</text>
-
-                <!-- HL 2 -->
-                <circle cx="350" cy="150" r="6" fill="#00A868" stroke="#FFFFFF" stroke-width="1.5" />
-                <rect x="328" y="162" width="44" height="20" rx="4" fill="#E6F7F0" stroke="#00A868" stroke-width="1.5" />
-                <text x="350" y="176" font-family="Montserrat" font-size="10" font-weight="800" fill="#00A868" text-anchor="middle">HL 2</text>
-
-                <!-- HH 2 -->
-                <circle cx="438" cy="50" r="6" fill="#00A868" stroke="#FFFFFF" stroke-width="1.5" />
-                <rect x="416" y="20" width="44" height="20" rx="4" fill="#E6F7F0" stroke="#00A868" stroke-width="1.5" />
-                <text x="438" y="34" font-family="Montserrat" font-size="10" font-weight="800" fill="#00A868" text-anchor="middle">HH 2</text>
-              </g>
+              <circle cx="400" cy="45" r="5.5" fill="#00A868" stroke="#FFFFFF" stroke-width="1.5" />
+              <rect x="380" y="18" width="40" height="18" rx="4" fill="#E6F7F0" stroke="#00A868" stroke-width="1.2" />
+              <text x="400" y="31" font-family="Montserrat" font-size="10" font-weight="800" fill="#00A868" text-anchor="middle">HH 2</text>
             </svg>
 
-            <div class="chart-legend">
-              <div class="legend-item"><div class="legend-dot green"></div> Bullish Candles</div>
-              <div class="legend-item"><div class="legend-dot red"></div> Bearish Candles</div>
-              <div class="legend-item"><div class="legend-dot blue"></div> Structural Line (HH + HL)</div>
+            <div class="chart-legend-row">
+              <div><span class="legend-dot green"></span> Bullish Impulses</div>
+              <div><span class="legend-dot red"></span> Pullbacks</div>
+              <div><span class="legend-dot navy"></span> Structure Line (HH + HL)</div>
             </div>
           </div>
         </div>
@@ -562,168 +589,121 @@
         </div>
 
         <div class="content-grid-2">
-          <div style="display: flex; flex-direction: column; gap: 16px;">
-            <div class="feature-card accent-top">
+          <div style="display: flex; flex-direction: column; gap: 18px;">
+            <div class="clean-card red-top">
               <div class="card-title">How to Spot a Downtrend</div>
-              <p class="card-text">
-                Every drop creates a <strong>Lower Low (LL)</strong>, and every bounce fails to break above the previous high, forming a <strong>Lower High (LH)</strong>.
+              <p class="card-desc">
+                A downtrend is characterized by a series of consecutive <strong>Lower Highs (LH)</strong> and <strong>Lower Lows (LL)</strong>.
               </p>
             </div>
 
             <ul class="clean-list">
-              <li>Price creates: High → Low → <strong>LH</strong> → <strong>LL</strong> → <strong>LH</strong> → <strong>LL</strong>.</li>
-              <li>As long as price stays below the recent Lower High, the downtrend is <strong>HEALTHY</strong>.</li>
-              <li><strong>Traders look to sell at the Lower High (bounce)</strong>, not at the very bottom of the Lower Low.</li>
+              <li>Each new wave plummets below the previous low (forming a new <strong>LL</strong>).</li>
+              <li>Each bounce is weak and stalls below the previous high (forming a <strong>LH</strong>).</li>
+              <li><strong>Pro Trader Tip:</strong> Look to sell at the <em>Lower High (bounce)</em>, never chase sells at the very bottom of a Lower Low.</li>
             </ul>
+
+            <div class="simple-callout red">
+              <strong>Healthy Trend Rule:</strong> As long as price remains below the most recent Lower High, the downtrend is intact and active.
+            </div>
           </div>
 
-          <div class="chart-container">
-            <div class="chart-view-toggles">
-              <button class="chart-tab active" onclick="setChartMode('chart-downtrend', 'both', this)">Both (Candles + Line)</button>
-              <button class="chart-tab" onclick="setChartMode('chart-downtrend', 'candles', this)">Candlesticks</button>
-              <button class="chart-tab" onclick="setChartMode('chart-downtrend', 'line', this)">Line Only</button>
-            </div>
+          <div class="chart-box">
+            <svg viewBox="0 0 520 280" width="100%" height="245">
+              <!-- Grid Lines -->
+              <line x1="30" y1="230" x2="490" y2="230" stroke="#F1F5F9" stroke-width="1.5" />
+              <line x1="30" y1="150" x2="490" y2="150" stroke="#F1F5F9" stroke-width="1.5" />
+              <line x1="30" y1="70" x2="490" y2="70" stroke="#F1F5F9" stroke-width="1.5" />
 
-            <svg id="chart-downtrend" viewBox="0 0 520 290" width="100%" height="250">
-              <!-- Guide lines -->
-              <line x1="40" y1="240" x2="480" y2="240" stroke="#F1F5F9" stroke-width="1.5" />
-              <line x1="40" y1="160" x2="480" y2="160" stroke="#F1F5F9" stroke-width="1.5" />
-              <line x1="40" y1="80" x2="480" y2="80" stroke="#F1F5F9" stroke-width="1.5" />
+              <!-- CANDLESTICKS LAYER -->
+              <!-- Leg 1: High (y=50) down to Low 1 (y=145) -->
+              <line x1="50" y1="50" x2="50" y2="80" class="candle-wick red" />
+              <rect x="44" y="55" width="12" height="20" rx="1.5" class="candle-body red" />
 
-              <!-- LAYER 1: CANDLESTICKS -->
-              <g class="layer-candlesticks">
-                <!-- Leg 1: High (y=60) down to Low 1 (y=155) -->
-                <!-- C1 (x=50): Red High Start -->
-                <line x1="50" y1="60" x2="50" y2="90" class="candle-wick red" />
-                <rect x="44" y="64" width="12" height="20" rx="1.5" class="candle-body red" />
+              <line x1="72" y1="75" x2="72" y2="110" class="candle-wick red" />
+              <rect x="66" y="80" width="12" height="25" rx="1.5" class="candle-body red" />
 
-                <!-- C2 (x=70): Red -->
-                <line x1="70" y1="80" x2="70" y2="120" class="candle-wick red" />
-                <rect x="64" y="85" width="12" height="30" rx="1.5" class="candle-body red" />
+              <line x1="94" y1="102" x2="94" y2="135" class="candle-wick red" />
+              <rect x="88" y="106" width="12" height="24" rx="1.5" class="candle-body red" />
 
-                <!-- C3 (x=90): Green small pause -->
-                <line x1="90" y1="105" x2="90" y2="125" class="candle-wick green" />
-                <rect x="84" y="108" width="12" height="12" rx="1.5" class="candle-body green" />
+              <line x1="116" y1="125" x2="116" y2="148" class="candle-wick red" />
+              <rect x="110" y="128" width="12" height="15" rx="1.5" class="candle-body red" />
 
-                <!-- C4 (x=110): Red -->
-                <line x1="110" y1="115" x2="110" y2="148" class="candle-wick red" />
-                <rect x="104" y="120" width="12" height="24" rx="1.5" class="candle-body red" />
+              <!-- Leg 2: Bounce to LH 1 (y=100) -->
+              <line x1="140" y1="120" x2="140" y2="145" class="candle-wick green" />
+              <rect x="134" y="124" width="12" height="16" rx="1.5" class="candle-body green" />
 
-                <!-- C5 (x=130): Red Low 1 bottom -->
-                <line x1="130" y1="135" x2="130" y2="155" class="candle-wick red" />
-                <rect x="124" y="138" width="12" height="14" rx="1.5" class="candle-body red" />
+              <line x1="162" y1="105" x2="162" y2="130" class="candle-wick green" />
+              <rect x="156" y="108" width="12" height="18" rx="1.5" class="candle-body green" />
 
-                <!-- Leg 2: Bounce to LH 1 (y=110) -->
-                <!-- C6 (x=152): Green -->
-                <line x1="152" y1="130" x2="152" y2="154" class="candle-wick green" />
-                <rect x="146" y="134" width="12" height="18" rx="1.5" class="candle-body green" />
+              <line x1="184" y1="100" x2="184" y2="120" class="candle-wick red" />
+              <rect x="178" y="106" width="12" height="10" rx="1.5" class="candle-body red" />
 
-                <!-- C7 (x=174): Green -->
-                <line x1="174" y1="118" x2="174" y2="140" class="candle-wick green" />
-                <rect x="168" y="122" width="12" height="16" rx="1.5" class="candle-body green" />
+              <!-- Leg 3: Drop to LL 1 (y=195) -->
+              <line x1="208" y1="115" x2="208" y2="145" class="candle-wick red" />
+              <rect x="202" y="120" width="12" height="22" rx="1.5" class="candle-body red" />
 
-                <!-- C8 (x=196): Red Inverted Hammer (LH 1 Peak) -->
-                <line x1="196" y1="110" x2="196" y2="132" class="candle-wick red" />
-                <rect x="190" y="122" width="12" height="8" rx="1.5" class="candle-body red" />
+              <line x1="232" y1="140" x2="232" y2="175" class="candle-wick red" />
+              <rect x="226" y="145" width="12" height="25" rx="1.5" class="candle-body red" />
 
-                <!-- Leg 3: Drop to LL 1 (y=205) + BOS -->
-                <!-- C9 (x=218): Red -->
-                <line x1="218" y1="125" x2="218" y2="158" class="candle-wick red" />
-                <rect x="212" y="130" width="12" height="24" rx="1.5" class="candle-body red" />
+              <line x1="256" y1="170" x2="256" y2="198" class="candle-wick red" />
+              <rect x="250" y="174" width="12" height="18" rx="1.5" class="candle-body red" />
 
-                <!-- C10 (x=240): Red (BOS breakdown closes below y=155) -->
-                <line x1="240" y1="150" x2="240" y2="185" class="candle-wick red" />
-                <rect x="234" y="154" width="12" height="26" rx="1.5" class="candle-body red" />
+              <!-- Leg 4: Bounce to LH 2 (y=150) -->
+              <line x1="280" y1="170" x2="280" y2="195" class="candle-wick green" />
+              <rect x="274" y="174" width="12" height="16" rx="1.5" class="candle-body green" />
 
-                <!-- C11 (x=262): Red -->
-                <line x1="262" y1="175" x2="262" y2="200" class="candle-wick red" />
-                <rect x="256" y="180" width="12" height="16" rx="1.5" class="candle-body red" />
+              <line x1="304" y1="155" x2="304" y2="180" class="candle-wick green" />
+              <rect x="298" y="158" width="12" height="16" rx="1.5" class="candle-body green" />
 
-                <!-- C12 (x=284): Red LL 1 Bottom -->
-                <line x1="284" y1="190" x2="284" y2="205" class="candle-wick red" />
-                <rect x="278" y="192" width="12" height="10" rx="1.5" class="candle-body red" />
+              <line x1="328" y1="150" x2="328" y2="170" class="candle-wick red" />
+              <rect x="322" y="156" width="12" height="10" rx="1.5" class="candle-body red" />
 
-                <!-- Leg 4: Bounce to LH 2 (y=155) -->
-                <!-- C13 (x=306): Green -->
-                <line x1="306" y1="180" x2="306" y2="206" class="candle-wick green" />
-                <rect x="300" y="184" width="12" height="20" rx="1.5" class="candle-body green" />
+              <!-- Leg 5: Drop to LL 2 (y=240) -->
+              <line x1="352" y1="165" x2="352" y2="195" class="candle-wick red" />
+              <rect x="346" y="170" width="12" height="20" rx="1.5" class="candle-body red" />
 
-                <!-- C14 (x=328): Green -->
-                <line x1="328" y1="162" x2="328" y2="188" class="candle-wick green" />
-                <rect x="322" y="166" width="12" height="18" rx="1.5" class="candle-body green" />
+              <line x1="376" y1="190" x2="376" y2="225" class="candle-wick red" />
+              <rect x="370" y="195" width="12" height="25" rx="1.5" class="candle-body red" />
 
-                <!-- C15 (x=350): Red Inverted Hammer (LH 2 Peak) -->
-                <line x1="350" y1="155" x2="350" y2="175" class="candle-wick red" />
-                <rect x="344" y="165" width="12" height="8" rx="1.5" class="candle-body red" />
+              <line x1="400" y1="220" x2="400" y2="245" class="candle-wick red" />
+              <rect x="394" y="224" width="12" height="18" rx="1.5" class="candle-body red" />
 
-                <!-- Leg 5: Drop to LL 2 (y=250) -->
-                <!-- C16 (x=372): Red -->
-                <line x1="372" y1="170" x2="372" y2="200" class="candle-wick red" />
-                <rect x="366" y="174" width="12" height="22" rx="1.5" class="candle-body red" />
+              <!-- Dotted BOS Breakdown Lines -->
+              <line x1="116" y1="145" x2="256" y2="145" stroke="#E53E3E" stroke-width="1.5" stroke-dasharray="4 3" />
+              <line x1="256" y1="195" x2="400" y2="195" stroke="#E53E3E" stroke-width="1.5" stroke-dasharray="4 3" />
 
-                <!-- C17 (x=394): Red (BOS breakdown closes below y=205) -->
-                <line x1="394" y1="195" x2="394" y2="228" class="candle-wick red" />
-                <rect x="388" y="198" width="12" height="26" rx="1.5" class="candle-body red" />
+              <!-- STRUCTURAL LINE OVERLAY -->
+              <polyline points="50,50 116,145 184,100 256,195 328,150 400,240" class="zigzag-line" stroke="#E53E3E" />
 
-                <!-- C18 (x=416): Red -->
-                <line x1="416" y1="222" x2="416" y2="245" class="candle-wick red" />
-                <rect x="410" y="226" width="12" height="16" rx="1.5" class="candle-body red" />
+              <!-- Swing Points Labels -->
+              <circle cx="50" cy="50" r="5" fill="#E53E3E" />
+              <text x="50" y="38" font-family="Montserrat" font-size="11" font-weight="700" fill="#0D1F3C" text-anchor="middle">High</text>
 
-                <!-- C19 (x=438): Red LL 2 Bottom -->
-                <line x1="438" y1="235" x2="438" y2="250" class="candle-wick red" />
-                <rect x="432" y="238" width="12" height="10" rx="1.5" class="candle-body red" />
-              </g>
+              <circle cx="116" cy="145" r="5" fill="#E53E3E" />
+              <text x="116" y="162" font-family="Montserrat" font-size="11" font-weight="700" fill="#0D1F3C" text-anchor="middle">Low 1</text>
 
-              <!-- LAYER 2: STRUCTURAL LINE GRAPH OVERLAY -->
-              <g class="layer-linegraph">
-                <!-- Trend Trajectory Line -->
-                <line x1="50" y1="70" x2="440" y2="240" stroke="#E53E3E" stroke-width="1.8" stroke-dasharray="5 4" />
+              <circle cx="184" cy="100" r="5.5" fill="#E53E3E" stroke="#FFFFFF" stroke-width="1.5" />
+              <rect x="164" y="70" width="40" height="18" rx="4" fill="#FEE2E2" stroke="#E53E3E" stroke-width="1.2" />
+              <text x="184" y="83" font-family="Montserrat" font-size="10" font-weight="800" fill="#E53E3E" text-anchor="middle">LH 1</text>
 
-                <!-- Dotted BOS breakdown horizontal lines -->
-                <line x1="130" y1="155" x2="284" y2="155" stroke="#E53E3E" stroke-width="1.5" stroke-dasharray="4 3" />
-                <text x="210" y="167" font-family="Montserrat" font-size="10" font-weight="700" fill="#E53E3E">BOS ✓</text>
+              <circle cx="256" cy="195" r="5.5" fill="#E53E3E" stroke="#FFFFFF" stroke-width="1.5" />
+              <rect x="236" y="206" width="40" height="18" rx="4" fill="#FEE2E2" stroke="#E53E3E" stroke-width="1.2" />
+              <text x="256" y="219" font-family="Montserrat" font-size="10" font-weight="800" fill="#E53E3E" text-anchor="middle">LL 1</text>
 
-                <line x1="284" y1="205" x2="438" y2="205" stroke="#E53E3E" stroke-width="1.5" stroke-dasharray="4 3" />
-                <text x="365" y="217" font-family="Montserrat" font-size="10" font-weight="700" fill="#E53E3E">BOS ✓</text>
+              <circle cx="328" cy="150" r="5.5" fill="#E53E3E" stroke="#FFFFFF" stroke-width="1.5" />
+              <rect x="308" y="120" width="40" height="18" rx="4" fill="#FEE2E2" stroke="#E53E3E" stroke-width="1.2" />
+              <text x="328" y="133" font-family="Montserrat" font-size="10" font-weight="800" fill="#E53E3E" text-anchor="middle">LH 2</text>
 
-                <!-- Zigzag line connecting swing points -->
-                <polyline points="50,60 130,155 196,110 284,205 350,155 438,250" class="structure-zigzag" />
-
-                <!-- Nodes & Badges -->
-                <!-- High -->
-                <circle cx="50" cy="60" r="5" fill="#E53E3E" />
-                <text x="50" y="45" font-family="Montserrat" font-size="11" font-weight="700" fill="#0D1F3C" text-anchor="middle">High</text>
-
-                <!-- Low 1 -->
-                <circle cx="130" cy="155" r="5" fill="#E53E3E" />
-                <text x="130" y="172" font-family="Montserrat" font-size="11" font-weight="700" fill="#0D1F3C" text-anchor="middle">Low 1</text>
-
-                <!-- LH 1 -->
-                <circle cx="196" cy="110" r="6" fill="#E53E3E" stroke="#FFFFFF" stroke-width="1.5" />
-                <rect x="174" y="78" width="44" height="20" rx="4" fill="#FEE2E2" stroke="#E53E3E" stroke-width="1.5" />
-                <text x="196" y="92" font-family="Montserrat" font-size="10" font-weight="800" fill="#E53E3E" text-anchor="middle">LH 1</text>
-
-                <!-- LL 1 -->
-                <circle cx="284" cy="205" r="6" fill="#E53E3E" stroke="#FFFFFF" stroke-width="1.5" />
-                <rect x="262" y="218" width="44" height="20" rx="4" fill="#FEE2E2" stroke="#E53E3E" stroke-width="1.5" />
-                <text x="284" y="232" font-family="Montserrat" font-size="10" font-weight="800" fill="#E53E3E" text-anchor="middle">LL 1</text>
-
-                <!-- LH 2 -->
-                <circle cx="350" cy="155" r="6" fill="#E53E3E" stroke="#FFFFFF" stroke-width="1.5" />
-                <rect x="328" y="122" width="44" height="20" rx="4" fill="#FEE2E2" stroke="#E53E3E" stroke-width="1.5" />
-                <text x="350" y="136" font-family="Montserrat" font-size="10" font-weight="800" fill="#E53E3E" text-anchor="middle">LH 2</text>
-
-                <!-- LL 2 -->
-                <circle cx="438" cy="250" r="6" fill="#E53E3E" stroke="#FFFFFF" stroke-width="1.5" />
-                <rect x="416" y="260" width="44" height="20" rx="4" fill="#FEE2E2" stroke="#E53E3E" stroke-width="1.5" />
-                <text x="438" y="274" font-family="Montserrat" font-size="10" font-weight="800" fill="#E53E3E" text-anchor="middle">LL 2</text>
-              </g>
+              <circle cx="400" cy="240" r="5.5" fill="#E53E3E" stroke="#FFFFFF" stroke-width="1.5" />
+              <rect x="380" y="250" width="40" height="18" rx="4" fill="#FEE2E2" stroke="#E53E3E" stroke-width="1.2" />
+              <text x="400" y="263" font-family="Montserrat" font-size="10" font-weight="800" fill="#E53E3E" text-anchor="middle">LL 2</text>
             </svg>
 
-            <div class="chart-legend">
-              <div class="legend-item"><div class="legend-dot red"></div> Bearish Candles</div>
-              <div class="legend-item"><div class="legend-dot green"></div> Bullish Bounces</div>
-              <div class="legend-item"><div class="legend-dot blue"></div> Structural Line (LH + LL)</div>
+            <div class="chart-legend-row">
+              <div><span class="legend-dot red"></span> Bearish Impulses</div>
+              <div><span class="legend-dot green"></span> Relief Bounces</div>
+              <div><span class="legend-dot navy"></span> Structure Line (LH + LL)</div>
             </div>
           </div>
         </div>
@@ -753,156 +733,115 @@
         </div>
 
         <div class="content-grid-2">
-          <div style="display: flex; flex-direction: column; gap: 16px;">
-            <div class="feature-card navy-top">
-              <div class="card-title">What is a Sideways Market?</div>
-              <p class="card-text">
-                When price is neither creating higher highs nor lower lows. It bounces back and forth between a <strong>Resistance ceiling</strong> and a <strong>Support floor</strong>.
+          <div style="display: flex; flex-direction: column; gap: 18px;">
+            <div class="clean-card navy-top">
+              <div class="card-title">What is a Range?</div>
+              <p class="card-desc">
+                When price is neither creating higher highs nor lower lows. Instead, price is trapped bouncing between two horizontal boundaries.
               </p>
             </div>
 
             <ul class="clean-list">
-              <li><strong>Equal Highs (EQH):</strong> Price hits the same upper level multiple times and rejects.</li>
-              <li><strong>Equal Lows (EQL):</strong> Price hits the same bottom level multiple times and bounces.</li>
-              <li><strong>Tip for Beginners:</strong> Avoid trading in the middle of a range. Wait for price to break out clearly!</li>
+              <li><strong>Resistance Ceiling:</strong> Equal Highs (EQH) where sellers reject price pushes.</li>
+              <li><strong>Support Floor:</strong> Equal Lows (EQL) where buyers defend and bounce price.</li>
+              <li><strong>Golden Beginner Rule:</strong> Avoid trading in the noisy middle of the range. Wait for price to break out clearly!</li>
             </ul>
+
+            <div class="simple-callout navy">
+              <strong>Strategy:</strong> Wait for a clean breakout candle that closes outside the range boundaries.
+            </div>
           </div>
 
-          <div class="chart-container">
-            <div class="chart-view-toggles">
-              <button class="chart-tab active" onclick="setChartMode('chart-sideways', 'both', this)">Both (Candles + Line)</button>
-              <button class="chart-tab" onclick="setChartMode('chart-sideways', 'candles', this)">Candlesticks</button>
-              <button class="chart-tab" onclick="setChartMode('chart-sideways', 'line', this)">Line Only</button>
-            </div>
+          <div class="chart-box">
+            <svg viewBox="0 0 520 280" width="100%" height="245">
+              <!-- Resistance Ceiling (Equal Highs) -->
+              <line x1="30" y1="75" x2="490" y2="75" stroke="#E53E3E" stroke-width="2" stroke-dasharray="5 4" />
+              <text x="35" y="65" font-family="Montserrat" font-size="11" font-weight="700" fill="#E53E3E">Resistance Ceiling (Equal Highs)</text>
 
-            <svg id="chart-sideways" viewBox="0 0 520 290" width="100%" height="250">
-              <!-- Resistance Line -->
-              <line x1="40" y1="80" x2="480" y2="80" stroke="#E53E3E" stroke-width="2" stroke-dasharray="5 4" />
-              <text x="45" y="70" font-family="Montserrat" font-size="11" font-weight="700" fill="#E53E3E">Resistance Ceiling (Equal Highs)</text>
+              <!-- Support Floor (Equal Lows) -->
+              <line x1="30" y1="205" x2="490" y2="205" stroke="#00A868" stroke-width="2" stroke-dasharray="5 4" />
+              <text x="35" y="222" font-family="Montserrat" font-size="11" font-weight="700" fill="#00A868">Support Floor (Equal Lows)</text>
 
-              <!-- Support Line -->
-              <line x1="40" y1="210" x2="480" y2="210" stroke="#00A868" stroke-width="2" stroke-dasharray="5 4" />
-              <text x="45" y="226" font-family="Montserrat" font-size="11" font-weight="700" fill="#00A868">Support Floor (Equal Lows)</text>
+              <!-- CANDLESTICKS LAYER -->
+              <!-- Move 1: Up to EQH 1 (x=115, y=75) -->
+              <line x1="55" y1="140" x2="55" y2="175" class="candle-wick green" />
+              <rect x="49" y="145" width="12" height="24" rx="1.5" class="candle-body green" />
 
-              <!-- LAYER 1: CANDLESTICKS -->
-              <g class="layer-candlesticks">
-                <!-- Move 1: Up to Resistance EQH 1 (x=120, y=80) -->
-                <!-- C1 (x=60) -->
-                <line x1="60" y1="130" x2="60" y2="165" class="candle-wick green" />
-                <rect x="54" y="135" width="12" height="24" rx="1.5" class="candle-body green" />
+              <line x1="85" y1="105" x2="85" y2="145" class="candle-wick green" />
+              <rect x="79" y="110" width="12" height="28" rx="1.5" class="candle-body green" />
 
-                <!-- C2 (x=80) -->
-                <line x1="80" y1="105" x2="80" y2="140" class="candle-wick green" />
-                <rect x="74" y="110" width="12" height="26" rx="1.5" class="candle-body green" />
+              <line x1="115" y1="75" x2="115" y2="110" class="candle-wick red" />
+              <rect x="109" y="90" width="12" height="15" rx="1.5" class="candle-body red" />
 
-                <!-- C3 (x=100) -->
-                <line x1="100" y1="88" x2="100" y2="118" class="candle-wick green" />
-                <rect x="94" y="92" width="12" height="22" rx="1.5" class="candle-body green" />
+              <!-- Move 2: Down to EQL 1 (x=195, y=205) -->
+              <line x1="142" y1="100" x2="142" y2="135" class="candle-wick red" />
+              <rect x="136" y="105" width="12" height="24" rx="1.5" class="candle-body red" />
 
-                <!-- C4 (x=120) Rejection Pinbar at Resistance EQH 1 -->
-                <line x1="120" y1="80" x2="120" y2="112" class="candle-wick red" />
-                <rect x="114" y="98" width="12" height="12" rx="1.5" class="candle-body red" />
+              <line x1="168" y1="135" x2="168" y2="175" class="candle-wick red" />
+              <rect x="162" y="140" width="12" height="28" rx="1.5" class="candle-body red" />
 
-                <!-- Move 2: Down to Support EQL 1 (x=200, y=210) -->
-                <!-- C5 (x=140) -->
-                <line x1="140" y1="105" x2="140" y2="138" class="candle-wick red" />
-                <rect x="134" y="110" width="12" height="24" rx="1.5" class="candle-body red" />
+              <line x1="195" y1="175" x2="195" y2="205" class="candle-wick green" />
+              <rect x="189" y="180" width="12" height="15" rx="1.5" class="candle-body green" />
 
-                <!-- C6 (x=160) -->
-                <line x1="160" y1="132" x2="160" y2="168" class="candle-wick red" />
-                <rect x="154" y="136" width="12" height="26" rx="1.5" class="candle-body red" />
+              <!-- Move 3: Up to EQH 2 (x=275, y=75) -->
+              <line x1="222" y1="145" x2="222" y2="180" class="candle-wick green" />
+              <rect x="216" y="150" width="12" height="24" rx="1.5" class="candle-body green" />
 
-                <!-- C7 (x=180) -->
-                <line x1="180" y1="162" x2="180" y2="198" class="candle-wick red" />
-                <rect x="174" y="165" width="12" height="28" rx="1.5" class="candle-body red" />
+              <line x1="248" y1="105" x2="248" y2="145" class="candle-wick green" />
+              <rect x="242" y="110" width="12" height="28" rx="1.5" class="candle-body green" />
 
-                <!-- C8 (x=200) Hammer Bounce at Support EQL 1 -->
-                <line x1="200" y1="185" x2="200" y2="210" class="candle-wick green" />
-                <rect x="194" y="188" width="12" height="10" rx="1.5" class="candle-body green" />
+              <line x1="275" y1="75" x2="275" y2="110" class="candle-wick red" />
+              <rect x="269" y="90" width="12" height="15" rx="1.5" class="candle-body red" />
 
-                <!-- Move 3: Up to Resistance EQH 2 (x=280, y=80) -->
-                <!-- C9 (x=220) -->
-                <line x1="220" y1="160" x2="220" y2="192" class="candle-wick green" />
-                <rect x="214" y="164" width="12" height="24" rx="1.5" class="candle-body green" />
+              <!-- Move 4: Down to EQL 2 (x=355, y=205) -->
+              <line x1="302" y1="100" x2="302" y2="135" class="candle-wick red" />
+              <rect x="296" y="105" width="12" height="24" rx="1.5" class="candle-body red" />
 
-                <!-- C10 (x=240) -->
-                <line x1="240" y1="128" x2="240" y2="166" class="candle-wick green" />
-                <rect x="234" y="132" width="12" height="30" rx="1.5" class="candle-body green" />
+              <line x1="328" y1="135" x2="328" y2="175" class="candle-wick red" />
+              <rect x="322" y="140" width="12" height="28" rx="1.5" class="candle-body red" />
 
-                <!-- C11 (x=260) -->
-                <line x1="260" y1="95" x2="260" y2="135" class="candle-wick green" />
-                <rect x="254" y="100" width="12" height="30" rx="1.5" class="candle-body green" />
+              <line x1="355" y1="175" x2="355" y2="205" class="candle-wick green" />
+              <rect x="349" y="180" width="12" height="15" rx="1.5" class="candle-body green" />
 
-                <!-- C12 (x=280) Rejection Pinbar at EQH 2 -->
-                <line x1="280" y1="80" x2="280" y2="115" class="candle-wick red" />
-                <rect x="274" y="98" width="12" height="12" rx="1.5" class="candle-body red" />
+              <!-- Move 5: Up to EQH 3 (x=435, y=75) -->
+              <line x1="382" y1="145" x2="382" y2="180" class="candle-wick green" />
+              <rect x="376" y="150" width="12" height="24" rx="1.5" class="candle-body green" />
 
-                <!-- Move 4: Down to Support EQL 2 (x=360, y=210) -->
-                <!-- C13 (x=300) -->
-                <line x1="300" y1="108" x2="300" y2="140" class="candle-wick red" />
-                <rect x="294" y="112" width="12" height="24" rx="1.5" class="candle-body red" />
+              <line x1="408" y1="105" x2="408" y2="145" class="candle-wick green" />
+              <rect x="402" y="110" width="12" height="28" rx="1.5" class="candle-body green" />
 
-                <!-- C14 (x=320) -->
-                <line x1="320" y1="135" x2="320" y2="172" class="candle-wick red" />
-                <rect x="314" y="140" width="12" height="28" rx="1.5" class="candle-body red" />
+              <line x1="435" y1="75" x2="435" y2="110" class="candle-wick red" />
+              <rect x="429" y="90" width="12" height="15" rx="1.5" class="candle-body red" />
 
-                <!-- C15 (x=340) -->
-                <line x1="340" y1="168" x2="340" y2="202" class="candle-wick red" />
-                <rect x="334" y="172" width="12" height="25" rx="1.5" class="candle-body red" />
+              <!-- STRUCTURAL LINE OVERLAY -->
+              <polyline points="55,160 115,75 195,205 275,75 355,205 435,75" class="zigzag-line" />
 
-                <!-- C16 (x=360) Hammer Bounce at EQL 2 -->
-                <line x1="360" y1="185" x2="360" y2="210" class="candle-wick green" />
-                <rect x="354" y="188" width="12" height="12" rx="1.5" class="candle-body green" />
+              <!-- Labels -->
+              <circle cx="115" cy="75" r="5" fill="#E53E3E" stroke="#FFFFFF" stroke-width="1.5" />
+              <rect x="93" y="45" width="44" height="18" rx="4" fill="#FEE2E2" stroke="#E53E3E" stroke-width="1.2" />
+              <text x="115" y="58" font-family="Montserrat" font-size="10" font-weight="800" fill="#E53E3E" text-anchor="middle">EQH 1</text>
 
-                <!-- Move 5: Up to Resistance EQH 3 (x=440, y=80) -->
-                <!-- C17 (x=380) -->
-                <line x1="380" y1="158" x2="380" y2="190" class="candle-wick green" />
-                <rect x="374" y="162" width="12" height="24" rx="1.5" class="candle-body green" />
+              <circle cx="195" cy="205" r="5" fill="#00A868" stroke="#FFFFFF" stroke-width="1.5" />
+              <rect x="173" y="215" width="44" height="18" rx="4" fill="#E6F7F0" stroke="#00A868" stroke-width="1.2" />
+              <text x="195" y="228" font-family="Montserrat" font-size="10" font-weight="800" fill="#00A868" text-anchor="middle">EQL 1</text>
 
-                <!-- C18 (x=400) -->
-                <line x1="400" y1="125" x2="400" y2="162" class="candle-wick green" />
-                <rect x="394" y="128" width="12" height="30" rx="1.5" class="candle-body green" />
+              <circle cx="275" cy="75" r="5" fill="#E53E3E" stroke="#FFFFFF" stroke-width="1.5" />
+              <rect x="253" y="45" width="44" height="18" rx="4" fill="#FEE2E2" stroke="#E53E3E" stroke-width="1.2" />
+              <text x="275" y="58" font-family="Montserrat" font-size="10" font-weight="800" fill="#E53E3E" text-anchor="middle">EQH 2</text>
 
-                <!-- C19 (x=420) -->
-                <line x1="420" y1="92" x2="420" y2="130" class="candle-wick green" />
-                <rect x="414" y="96" width="12" height="30" rx="1.5" class="candle-body green" />
+              <circle cx="355" cy="205" r="5" fill="#00A868" stroke="#FFFFFF" stroke-width="1.5" />
+              <rect x="333" y="215" width="44" height="18" rx="4" fill="#E6F7F0" stroke="#00A868" stroke-width="1.2" />
+              <text x="355" y="228" font-family="Montserrat" font-size="10" font-weight="800" fill="#00A868" text-anchor="middle">EQL 2</text>
 
-                <!-- C20 (x=440) Rejection at EQH 3 -->
-                <line x1="440" y1="80" x2="440" y2="114" class="candle-wick red" />
-                <rect x="434" y="96" width="12" height="14" rx="1.5" class="candle-body red" />
-              </g>
-
-              <!-- LAYER 2: STRUCTURAL LINE GRAPH OVERLAY -->
-              <g class="layer-linegraph">
-                <polyline points="60,150 120,80 200,210 280,80 360,210 440,80" class="structure-zigzag" />
-
-                <!-- Nodes & Badges -->
-                <circle cx="120" cy="80" r="5" fill="#E53E3E" stroke="#FFFFFF" stroke-width="1.5" />
-                <rect x="98" y="50" width="44" height="20" rx="4" fill="#FEE2E2" stroke="#E53E3E" stroke-width="1.5" />
-                <text x="120" y="64" font-family="Montserrat" font-size="10" font-weight="800" fill="#E53E3E" text-anchor="middle">EQH 1</text>
-
-                <circle cx="200" cy="210" r="5" fill="#00A868" stroke="#FFFFFF" stroke-width="1.5" />
-                <rect x="178" y="222" width="44" height="20" rx="4" fill="#E6F7F0" stroke="#00A868" stroke-width="1.5" />
-                <text x="200" y="236" font-family="Montserrat" font-size="10" font-weight="800" fill="#00A868" text-anchor="middle">EQL 1</text>
-
-                <circle cx="280" cy="80" r="5" fill="#E53E3E" stroke="#FFFFFF" stroke-width="1.5" />
-                <rect x="258" y="50" width="44" height="20" rx="4" fill="#FEE2E2" stroke="#E53E3E" stroke-width="1.5" />
-                <text x="280" y="64" font-family="Montserrat" font-size="10" font-weight="800" fill="#E53E3E" text-anchor="middle">EQH 2</text>
-
-                <circle cx="360" cy="210" r="5" fill="#00A868" stroke="#FFFFFF" stroke-width="1.5" />
-                <rect x="338" y="222" width="44" height="20" rx="4" fill="#E6F7F0" stroke="#00A868" stroke-width="1.5" />
-                <text x="360" y="236" font-family="Montserrat" font-size="10" font-weight="800" fill="#00A868" text-anchor="middle">EQL 2</text>
-
-                <circle cx="440" cy="80" r="5" fill="#E53E3E" stroke="#FFFFFF" stroke-width="1.5" />
-                <rect x="418" y="50" width="44" height="20" rx="4" fill="#FEE2E2" stroke="#E53E3E" stroke-width="1.5" />
-                <text x="440" y="64" font-family="Montserrat" font-size="10" font-weight="800" fill="#E53E3E" text-anchor="middle">EQH 3</text>
-              </g>
+              <circle cx="435" cy="75" r="5" fill="#E53E3E" stroke="#FFFFFF" stroke-width="1.5" />
+              <rect x="413" y="45" width="44" height="18" rx="4" fill="#FEE2E2" stroke="#E53E3E" stroke-width="1.2" />
+              <text x="435" y="58" font-family="Montserrat" font-size="10" font-weight="800" fill="#E53E3E" text-anchor="middle">EQH 3</text>
             </svg>
 
-            <div class="chart-legend">
-              <div class="legend-item"><div class="legend-dot green"></div> Support Bounces</div>
-              <div class="legend-item"><div class="legend-dot red"></div> Resistance Rejections</div>
-              <div class="legend-item"><div class="legend-dot blue"></div> Range Structure Line (EQH + EQL)</div>
+            <div class="chart-legend-row">
+              <div><span class="legend-dot green"></span> Support Bounces</div>
+              <div><span class="legend-dot red"></span> Resistance Rejections</div>
+              <div><span class="legend-dot navy"></span> Range Structure Line</div>
             </div>
           </div>
         </div>
@@ -932,122 +871,97 @@
         </div>
 
         <div class="content-grid-2">
-          <div style="display: flex; flex-direction: column; gap: 16px;">
-            <div class="feature-card green-top">
+          <div style="display: flex; flex-direction: column; gap: 18px;">
+            <div class="clean-card green-top">
               <div class="card-title">What is a BOS?</div>
-              <p class="card-text">
-                <strong>BOS (Break of Structure)</strong> means the trend is <strong>CONTINUING</strong> in the same direction.
+              <p class="card-desc">
+                <strong>BOS (Break of Structure)</strong> is the clearest confirmation that the existing trend is <strong>CONTINUING</strong> in the same direction.
               </p>
             </div>
 
             <ul class="clean-list green">
-              <li><strong>In an Uptrend:</strong> A BOS happens when price breaks above the previous swing high to make a new Higher High (HH).</li>
-              <li><strong>In a Downtrend:</strong> A BOS happens when price breaks below the previous swing low to make a new Lower Low (LL).</li>
-              <li><strong>Meaning:</strong> The trend is strong and healthy. Keep following it!</li>
+              <li><strong>Bullish BOS:</strong> Price breaks above the previous swing high to print a fresh Higher High (HH).</li>
+              <li><strong>Bearish BOS:</strong> Price breaks below the previous swing low to print a fresh Lower Low (LL).</li>
+              <li><strong>Crucial Validation:</strong> We want to see a <strong>full candle body close</strong> past the level — not just a wick sweep!</li>
             </ul>
 
-            <div class="callout-box green">
-              <strong>Key Rule:</strong> We want to see the <strong>candle body close</strong> beyond the level, not just a quick wick poke!
+            <div class="simple-callout green">
+              <strong>Takeaway:</strong> BOS means the buyers (or sellers) are still strong. Stay with the trend!
             </div>
           </div>
 
-          <div class="chart-container">
-            <div class="chart-view-toggles">
-              <button class="chart-tab active" onclick="setChartMode('chart-bos', 'both', this)">Both (Candles + Line)</button>
-              <button class="chart-tab" onclick="setChartMode('chart-bos', 'candles', this)">Candlesticks</button>
-              <button class="chart-tab" onclick="setChartMode('chart-bos', 'line', this)">Line Only</button>
-            </div>
+          <div class="chart-box">
+            <svg viewBox="0 0 520 280" width="100%" height="245">
+              <!-- Prior High Level Horizontal Line -->
+              <line x1="40" y1="130" x2="480" y2="130" stroke="#00A868" stroke-width="2" stroke-dasharray="5 4" />
+              <text x="45" y="120" font-family="Montserrat" font-size="11" font-weight="700" fill="#64748B">Previous Swing High Level (BOS Line)</text>
 
-            <svg id="chart-bos" viewBox="0 0 520 290" width="100%" height="250">
-              <!-- Previous High Horizontal Line -->
-              <line x1="50" y1="130" x2="470" y2="130" stroke="#00A868" stroke-width="2" stroke-dasharray="5 4" />
-              <text x="50" y="120" font-family="Montserrat" font-size="11" font-weight="700" fill="#718096">Previous Swing High Level (y=130)</text>
+              <!-- CANDLESTICKS LAYER -->
+              <!-- Leg 1: Rise to Prior High (x=150, y=130) -->
+              <line x1="75" y1="190" x2="75" y2="225" class="candle-wick green" />
+              <rect x="69" y="195" width="12" height="25" rx="1.5" class="candle-body green" />
 
-              <!-- LAYER 1: CANDLESTICKS -->
-              <g class="layer-candlesticks">
-                <!-- Move 1: Rising to Previous High (x=160, y=130) -->
-                <!-- C1 (x=80) -->
-                <line x1="80" y1="190" x2="80" y2="225" class="candle-wick green" />
-                <rect x="74" y="195" width="12" height="25" rx="1.5" class="candle-body green" />
+              <line x1="100" y1="165" x2="100" y2="200" class="candle-wick green" />
+              <rect x="94" y="170" width="12" height="25" rx="1.5" class="candle-body green" />
 
-                <!-- C2 (x=105) -->
-                <line x1="105" y1="165" x2="105" y2="200" class="candle-wick green" />
-                <rect x="99" y="170" width="12" height="25" rx="1.5" class="candle-body green" />
+              <line x1="125" y1="145" x2="125" y2="175" class="candle-wick green" />
+              <rect x="119" y="150" width="12" height="20" rx="1.5" class="candle-body green" />
 
-                <!-- C3 (x=130) -->
-                <line x1="130" y1="145" x2="130" y2="175" class="candle-wick green" />
-                <rect x="124" y="150" width="12" height="20" rx="1.5" class="candle-body green" />
+              <line x1="150" y1="130" x2="150" y2="160" class="candle-wick green" />
+              <rect x="144" y="136" width="12" height="18" rx="1.5" class="candle-body green" />
 
-                <!-- C4 (x=155) Prior High Peak Candle -->
-                <line x1="155" y1="130" x2="155" y2="160" class="candle-wick green" />
-                <rect x="149" y="136" width="12" height="18" rx="1.5" class="candle-body green" />
+              <!-- Leg 2: Pullback to HL (x=225, y=185) -->
+              <line x1="175" y1="138" x2="175" y2="165" class="candle-wick red" />
+              <rect x="169" y="142" width="12" height="18" rx="1.5" class="candle-body red" />
 
-                <!-- Move 2: Pullback to HL (x=240, y=185) -->
-                <!-- C5 (x=180) -->
-                <line x1="180" y1="138" x2="180" y2="165" class="candle-wick red" />
-                <rect x="174" y="142" width="12" height="18" rx="1.5" class="candle-body red" />
+              <line x1="200" y1="155" x2="200" y2="180" class="candle-wick red" />
+              <rect x="194" y="158" width="12" height="18" rx="1.5" class="candle-body red" />
 
-                <!-- C6 (x=205) -->
-                <line x1="205" y1="155" x2="205" y2="180" class="candle-wick red" />
-                <rect x="199" y="158" width="12" height="18" rx="1.5" class="candle-body red" />
+              <line x1="225" y1="168" x2="225" y2="188" class="candle-wick green" />
+              <rect x="219" y="170" width="12" height="12" rx="1.5" class="candle-body green" />
 
-                <!-- C7 (x=230) HL Hammer Bounce -->
-                <line x1="230" y1="168" x2="230" y2="188" class="candle-wick green" />
-                <rect x="224" y="170" width="12" height="10" rx="1.5" class="candle-body green" />
+              <!-- Leg 3: BOS Breakout Continuation! -->
+              <line x1="250" y1="148" x2="250" y2="176" class="candle-wick green" />
+              <rect x="244" y="152" width="12" height="20" rx="1.5" class="candle-body green" />
 
-                <!-- Move 3: Aggressive BOS Breakout! -->
-                <!-- C8 (x=255) Approach -->
-                <line x1="255" y1="148" x2="255" y2="176" class="candle-wick green" />
-                <rect x="249" y="152" width="12" height="20" rx="1.5" class="candle-body green" />
+              <line x1="275" y1="128" x2="275" y2="155" class="candle-wick green" />
+              <rect x="269" y="132" width="12" height="20" rx="1.5" class="candle-body green" />
 
-                <!-- C9 (x=280) At level -->
-                <line x1="280" y1="128" x2="280" y2="155" class="candle-wick green" />
-                <rect x="274" y="132" width="12" height="20" rx="1.5" class="candle-body green" />
+              <!-- THE BOS CANDLE: CLOSING BOLDLY ABOVE y=130 -->
+              <line x1="305" y1="95" x2="305" y2="135" class="candle-wick green" stroke-width="2.5" />
+              <rect x="297" y="102" width="16" height="28" rx="2" class="candle-body green" />
 
-                <!-- C10 (x=310) THE BOS CANDLE: FULL BODY CLOSING ABOVE LEVEL -->
-                <line x1="310" y1="95" x2="310" y2="135" class="candle-wick green" stroke-width="2.5" />
-                <rect x="302" y="102" width="16" height="28" rx="2" class="candle-body green" />
+              <line x1="335" y1="75" x2="335" y2="108" class="candle-wick green" />
+              <rect x="329" y="80" width="12" height="24" rx="1.5" class="candle-body green" />
 
-                <!-- C11 (x=340) Expansion Continuation -->
-                <line x1="340" y1="75" x2="340" y2="108" class="candle-wick green" />
-                <rect x="334" y="80" width="12" height="24" rx="1.5" class="candle-body green" />
+              <line x1="360" y1="65" x2="360" y2="92" class="candle-wick green" />
+              <rect x="354" y="70" width="12" height="18" rx="1.5" class="candle-body green" />
 
-                <!-- C12 (x=365) New HH Peak -->
-                <line x1="365" y1="65" x2="365" y2="92" class="candle-wick green" />
-                <rect x="359" y="70" width="12" height="16" rx="1.5" class="candle-body green" />
+              <!-- STRUCTURAL LINE OVERLAY -->
+              <polyline points="75,220 150,130 225,188 360,65" class="zigzag-line" />
 
-                <!-- C13 (x=390) Pullback start -->
-                <line x1="390" y1="72" x2="390" y2="100" class="candle-wick red" />
-                <rect x="384" y="76" width="12" height="18" rx="1.5" class="candle-body red" />
-              </g>
+              <!-- Labels -->
+              <circle cx="150" cy="130" r="5" fill="#0D1F3C" />
+              <text x="150" y="115" font-family="Montserrat" font-size="11" font-weight="700" fill="#0D1F3C" text-anchor="middle">Prior High</text>
 
-              <!-- LAYER 2: STRUCTURAL LINE GRAPH OVERLAY -->
-              <g class="layer-linegraph">
-                <polyline points="80,220 155,130 230,188 365,65 420,115" class="structure-zigzag" />
+              <circle cx="225" cy="188" r="5.5" fill="#00A868" stroke="#FFFFFF" stroke-width="1.5" />
+              <rect x="205" y="198" width="40" height="18" rx="4" fill="#E6F7F0" stroke="#00A868" stroke-width="1.2" />
+              <text x="225" y="211" font-family="Montserrat" font-size="10" font-weight="800" fill="#00A868" text-anchor="middle">HL</text>
 
-                <!-- Nodes & Badges -->
-                <circle cx="155" cy="130" r="5" fill="#0D1F3C" />
-                <text x="155" y="115" font-family="Montserrat" font-size="11" font-weight="700" fill="#0D1F3C" text-anchor="middle">Prior High</text>
+              <!-- BOS Breakthrough Marker -->
+              <circle cx="305" cy="130" r="7" fill="#00A868" stroke="#FFFFFF" stroke-width="2" />
+              <rect x="270" y="138" width="70" height="22" rx="5" fill="#E6F7F0" stroke="#00A868" stroke-width="1.5" />
+              <text x="305" y="153" font-family="Montserrat" font-size="11" font-weight="800" fill="#00A868" text-anchor="middle">BOS ✓</text>
 
-                <circle cx="230" cy="188" r="6" fill="#00A868" stroke="#FFFFFF" stroke-width="1.5" />
-                <rect x="208" y="200" width="44" height="20" rx="4" fill="#E6F7F0" stroke="#00A868" stroke-width="1.5" />
-                <text x="230" y="214" font-family="Montserrat" font-size="10" font-weight="800" fill="#00A868" text-anchor="middle">HL</text>
-
-                <!-- Breakout Node -->
-                <circle cx="310" cy="130" r="7" fill="#00A868" stroke="#FFFFFF" stroke-width="2" />
-                <rect x="275" y="138" width="70" height="22" rx="4" fill="#E6F7F0" stroke="#00A868" stroke-width="1.5" />
-                <text x="310" y="153" font-family="Montserrat" font-size="10" font-weight="800" fill="#00A868" text-anchor="middle">BOS ✓</text>
-
-                <circle cx="365" cy="65" r="6" fill="#00A868" stroke="#FFFFFF" stroke-width="1.5" />
-                <rect x="340" y="35" width="50" height="20" rx="4" fill="#E6F7F0" stroke="#00A868" stroke-width="1.5" />
-                <text x="365" y="49" font-family="Montserrat" font-size="10" font-weight="800" fill="#00A868" text-anchor="middle">New HH</text>
-              </g>
+              <circle cx="360" cy="65" r="5.5" fill="#00A868" stroke="#FFFFFF" stroke-width="1.5" />
+              <rect x="336" y="35" width="48" height="18" rx="4" fill="#E6F7F0" stroke="#00A868" stroke-width="1.2" />
+              <text x="360" y="48" font-family="Montserrat" font-size="10" font-weight="800" fill="#00A868" text-anchor="middle">New HH</text>
             </svg>
 
-            <div class="chart-legend">
-              <div class="legend-item"><div class="legend-dot green"></div> Bullish Candles</div>
-              <div class="legend-item"><div class="legend-dot red"></div> Pullback Candles</div>
-              <div class="legend-item"><div class="legend-dot blue"></div> BOS Structure Line</div>
+            <div class="chart-legend-row">
+              <div><span class="legend-dot green"></span> Bullish Expansion</div>
+              <div><span class="legend-dot red"></span> Pullback</div>
+              <div><span class="legend-dot navy"></span> Structural BOS Line</div>
             </div>
           </div>
         </div>
@@ -1077,138 +991,113 @@
         </div>
 
         <div class="content-grid-2">
-          <div style="display: flex; flex-direction: column; gap: 16px;">
-            <div class="feature-card accent-top">
-              <div class="card-title">What is a Market Structure Shift (MSS)?</div>
-              <p class="card-text">
-                An <strong>MSS</strong> (also called <strong>CHoCH</strong>) means the trend is <strong>REVERSING</strong> and changing direction.
+          <div style="display: flex; flex-direction: column; gap: 18px;">
+            <div class="clean-card red-top">
+              <div class="card-title">What is an MSS?</div>
+              <p class="card-desc">
+                An <strong>MSS (Market Structure Shift)</strong>, also known as <strong>CHoCH (Change of Character)</strong>, marks the moment the trend <strong>REVERSES</strong> and changes direction.
               </p>
             </div>
 
             <ul class="clean-list">
-              <li><strong>From Uptrend to Downtrend:</strong> Price fails to continue up and breaks BELOW the last Higher Low (HL).</li>
-              <li><strong>From Downtrend to Uptrend:</strong> Price breaks ABOVE the last Lower High (LH).</li>
-              <li><strong>Meaning:</strong> The old trend is over. Stop trading the old direction and watch for the new trend!</li>
+              <li><strong>Bullish to Bearish:</strong> Price in an uptrend fails and breaks <strong>BELOW</strong> the most recent Higher Low (HL).</li>
+              <li><strong>Bearish to Bullish:</strong> Price in a downtrend breaks <strong>ABOVE</strong> the most recent Lower High (LH).</li>
+              <li><strong>BOS vs MSS:</strong> <em>BOS = Continuation</em> | <em>MSS = Reversal</em>.</li>
             </ul>
 
-            <div class="callout-box red">
-              <strong>Difference:</strong> <em>BOS</em> = Trend continues. <em>MSS</em> = Trend flips!
+            <div class="simple-callout red">
+              <strong>Crucial Warning:</strong> When an MSS occurs, stop buying! The trend has flipped to bearish.
             </div>
           </div>
 
-          <div class="chart-container">
-            <div class="chart-view-toggles">
-              <button class="chart-tab active" onclick="setChartMode('chart-mss', 'both', this)">Both (Candles + Line)</button>
-              <button class="chart-tab" onclick="setChartMode('chart-mss', 'candles', this)">Candlesticks</button>
-              <button class="chart-tab" onclick="setChartMode('chart-mss', 'line', this)">Line Only</button>
-            </div>
+          <div class="chart-box">
+            <svg viewBox="0 0 520 280" width="100%" height="245">
+              <!-- Key HL Support Line that gets broken -->
+              <line x1="140" y1="170" x2="480" y2="170" stroke="#E53E3E" stroke-width="2" stroke-dasharray="5 4" />
+              <text x="145" y="162" font-family="Montserrat" font-size="11" font-weight="700" fill="#E53E3E">Key Higher Low (HL) Support (y=170)</text>
 
-            <svg id="chart-mss" viewBox="0 0 520 290" width="100%" height="250">
-              <!-- Key HL Line that gets broken -->
-              <line x1="140" y1="175" x2="470" y2="175" stroke="#E53E3E" stroke-width="2" stroke-dasharray="5 4" />
-              <text x="145" y="167" font-family="Montserrat" font-size="11" font-weight="700" fill="#E53E3E">Key Higher Low (HL) Support (y=175)</text>
+              <!-- CANDLESTICKS LAYER -->
+              <!-- Leg 1: Uptrend into HH (y=80) -->
+              <line x1="60" y1="205" x2="60" y2="235" class="candle-wick green" />
+              <rect x="54" y="210" width="12" height="20" rx="1.5" class="candle-body green" />
 
-              <!-- LAYER 1: CANDLESTICKS -->
-              <g class="layer-candlesticks">
-                <!-- Move 1: Uptrend into HH (y=85) -->
-                <!-- C1 (x=60) -->
-                <line x1="60" y1="205" x2="60" y2="235" class="candle-wick green" />
-                <rect x="54" y="210" width="12" height="20" rx="1.5" class="candle-body green" />
+              <line x1="85" y1="175" x2="85" y2="210" class="candle-wick green" />
+              <rect x="79" y="180" width="12" height="26" rx="1.5" class="candle-body green" />
 
-                <!-- C2 (x=85) -->
-                <line x1="85" y1="175" x2="85" y2="210" class="candle-wick green" />
-                <rect x="79" y="180" width="12" height="26" rx="1.5" class="candle-body green" />
+              <line x1="110" y1="140" x2="110" y2="180" class="candle-wick green" />
+              <rect x="104" y="145" width="12" height="30" rx="1.5" class="candle-body green" />
 
-                <!-- C3 (x=110) -->
-                <line x1="110" y1="140" x2="110" y2="180" class="candle-wick green" />
-                <rect x="104" y="145" width="12" height="30" rx="1.5" class="candle-body green" />
+              <line x1="135" y1="130" x2="135" y2="155" class="candle-wick green" />
+              <rect x="129" y="134" width="12" height="18" rx="1.5" class="candle-body green" />
 
-                <!-- C4 (x=135) First High -->
-                <line x1="135" y1="130" x2="135" y2="155" class="candle-wick green" />
-                <rect x="129" y="134" width="12" height="18" rx="1.5" class="candle-body green" />
+              <!-- Leg 2: Pullback to Key HL (x=185, y=170) -->
+              <line x1="160" y1="138" x2="160" y2="165" class="candle-wick red" />
+              <rect x="154" y="142" width="12" height="18" rx="1.5" class="candle-body red" />
 
-                <!-- Move 2: Pullback to Key HL (x=190, y=175) -->
-                <!-- C5 (x=160) -->
-                <line x1="160" y1="138" x2="160" y2="165" class="candle-wick red" />
-                <rect x="154" y="142" width="12" height="18" rx="1.5" class="candle-body red" />
+              <line x1="185" y1="155" x2="185" y2="175" class="candle-wick green" />
+              <rect x="179" y="158" width="12" height="14" rx="1.5" class="candle-body green" />
 
-                <!-- C6 (x=185) Key HL Hammer Candle -->
-                <line x1="185" y1="155" x2="185" y2="178" class="candle-wick green" />
-                <rect x="179" y="158" width="12" height="14" rx="1.5" class="candle-body green" />
+              <!-- Leg 3: Push to HH (x=255, y=80) -->
+              <line x1="210" y1="130" x2="210" y2="160" class="candle-wick green" />
+              <rect x="204" y="135" width="12" height="22" rx="1.5" class="candle-body green" />
 
-                <!-- Move 3: Expansion to HH (x=255, y=85) -->
-                <!-- C7 (x=210) -->
-                <line x1="210" y1="130" x2="210" y2="160" class="candle-wick green" />
-                <rect x="204" y="135" width="12" height="22" rx="1.5" class="candle-body green" />
+              <line x1="235" y1="100" x2="235" y2="135" class="candle-wick green" />
+              <rect x="229" y="105" width="12" height="26" rx="1.5" class="candle-body green" />
 
-                <!-- C8 (x=235) -->
-                <line x1="235" y1="100" x2="235" y2="135" class="candle-wick green" />
-                <rect x="229" y="105" width="12" height="26" rx="1.5" class="candle-body green" />
+              <line x1="255" y1="80" x2="255" y2="110" class="candle-wick green" />
+              <rect x="249" y="85" width="12" height="20" rx="1.5" class="candle-body green" />
 
-                <!-- C9 (x=260) Peak HH Candle -->
-                <line x1="260" y1="85" x2="260" y2="115" class="candle-wick green" />
-                <rect x="254" y="90" width="12" height="20" rx="1.5" class="candle-body green" />
+              <!-- Leg 4: The Reversal & Breakdown -->
+              <line x1="280" y1="92" x2="280" y2="130" class="candle-wick red" />
+              <rect x="274" y="96" width="12" height="30" rx="1.5" class="candle-body red" />
 
-                <!-- Move 4: Weak bounce / Failure -->
-                <!-- C10 (x=285) Red drop -->
-                <line x1="285" y1="95" x2="285" y2="135" class="candle-wick red" />
-                <rect x="279" y="100" width="12" height="30" rx="1.5" class="candle-body red" />
+              <line x1="305" y1="125" x2="305" y2="160" class="candle-wick red" />
+              <rect x="299" y="130" width="12" height="26" rx="1.5" class="candle-body red" />
 
-                <!-- C11 (x=310) Red drop approaching Key HL -->
-                <line x1="310" y1="130" x2="310" y2="165" class="candle-wick red" />
-                <rect x="304" y="135" width="12" height="26" rx="1.5" class="candle-body red" />
+              <!-- THE MSS CANDLE: SOLID BODY SLAMS THROUGH y=170 -->
+              <line x1="335" y1="155" x2="335" y2="215" class="candle-wick red" stroke-width="2.5" />
+              <rect x="327" y="162" width="16" height="46" rx="2" class="candle-body red" />
 
-                <!-- C12 (x=340) THE MSS CANDLE: SOLID BEARISH BODY SLAMS THROUGH y=175 -->
-                <line x1="340" y1="160" x2="340" y2="220" class="candle-wick red" stroke-width="2.5" />
-                <rect x="332" y="168" width="16" height="44" rx="2" class="candle-body red" />
+              <!-- Leg 5: LH Bounce and Down to LL -->
+              <line x1="365" y1="170" x2="365" y2="200" class="candle-wick green" />
+              <rect x="359" y="174" width="12" height="20" rx="1.5" class="candle-body green" />
 
-                <!-- Move 5: Weak LH Bounce and Continuation Down -->
-                <!-- C13 (x=370) Small Green LH Pullback -->
-                <line x1="370" y1="175" x2="370" y2="208" class="candle-wick green" />
-                <rect x="364" y="180" width="12" height="22" rx="1.5" class="candle-body green" />
+              <line x1="390" y1="160" x2="390" y2="190" class="candle-wick red" />
+              <rect x="384" y="170" width="12" height="15" rx="1.5" class="candle-body red" />
 
-                <!-- C14 (x=395) Inverted Hammer LH -->
-                <line x1="395" y1="165" x2="395" y2="195" class="candle-wick red" />
-                <rect x="389" y="178" width="12" height="14" rx="1.5" class="candle-body red" />
+              <line x1="420" y1="185" x2="420" y2="225" class="candle-wick red" />
+              <rect x="414" y="190" width="12" height="30" rx="1.5" class="candle-body red" />
 
-                <!-- C15 (x=420) Red Drop -->
-                <line x1="420" y1="188" x2="420" y2="228" class="candle-wick red" />
-                <rect x="414" y="192" width="12" height="30" rx="1.5" class="candle-body red" />
+              <line x1="445" y1="220" x2="445" y2="250" class="candle-wick red" />
+              <rect x="439" y="225" width="12" height="20" rx="1.5" class="candle-body red" />
 
-                <!-- C16 (x=445) Red New LL -->
-                <line x1="445" y1="222" x2="445" y2="255" class="candle-wick red" />
-                <rect x="439" y="226" width="12" height="24" rx="1.5" class="candle-body red" />
-              </g>
+              <!-- STRUCTURAL LINE OVERLAY -->
+              <polyline points="60,225 135,130 185,170 255,80 335,210 390,160 445,250" class="zigzag-line" stroke="#E53E3E" />
 
-              <!-- LAYER 2: STRUCTURAL LINE GRAPH OVERLAY -->
-              <g class="layer-linegraph">
-                <polyline points="60,225 135,130 185,175 260,85 340,215 395,165 445,255" class="structure-zigzag" />
+              <!-- Labels -->
+              <circle cx="185" cy="170" r="5" fill="#00A868" />
+              <text x="185" y="190" font-family="Montserrat" font-size="10" font-weight="700" fill="#00A868" text-anchor="middle">Key HL</text>
 
-                <!-- Nodes & Badges -->
-                <circle cx="185" cy="175" r="5" fill="#00A868" />
-                <text x="185" y="195" font-family="Montserrat" font-size="10" font-weight="700" fill="#00A868" text-anchor="middle">Key HL</text>
+              <circle cx="255" cy="80" r="5.5" fill="#00A868" stroke="#FFFFFF" stroke-width="1.5" />
+              <rect x="235" y="52" width="40" height="18" rx="4" fill="#E6F7F0" stroke="#00A868" stroke-width="1.2" />
+              <text x="255" y="65" font-family="Montserrat" font-size="10" font-weight="800" fill="#00A868" text-anchor="middle">HH</text>
 
-                <circle cx="260" cy="85" r="6" fill="#00A868" stroke="#FFFFFF" stroke-width="1.5" />
-                <rect x="238" y="55" width="44" height="20" rx="4" fill="#E6F7F0" stroke="#00A868" stroke-width="1.5" />
-                <text x="260" y="69" font-family="Montserrat" font-size="10" font-weight="800" fill="#00A868" text-anchor="middle">HH</text>
+              <!-- MSS Reversal Marker -->
+              <circle cx="335" cy="170" r="7" fill="#E53E3E" stroke="#FFFFFF" stroke-width="2" />
+              <rect x="285" y="180" width="100" height="22" rx="5" fill="#FEE2E2" stroke="#E53E3E" stroke-width="1.5" />
+              <text x="335" y="195" font-family="Montserrat" font-size="10" font-weight="800" fill="#E53E3E" text-anchor="middle">MSS SHIFT! ✗</text>
 
-                <!-- MSS Shift Marker -->
-                <circle cx="340" cy="175" r="7" fill="#E53E3E" stroke="#FFFFFF" stroke-width="2" />
-                <rect x="290" y="185" width="100" height="22" rx="4" fill="#FEE2E2" stroke="#E53E3E" stroke-width="1.5" />
-                <text x="340" y="199" font-family="Montserrat" font-size="10" font-weight="800" fill="#E53E3E" text-anchor="middle">MSS SHIFT! ✗</text>
+              <circle cx="390" cy="160" r="5" fill="#E53E3E" />
+              <text x="390" y="148" font-family="Montserrat" font-size="10" font-weight="700" fill="#E53E3E" text-anchor="middle">LH (Sell)</text>
 
-                <circle cx="395" cy="165" r="5" fill="#E53E3E" stroke="#FFFFFF" stroke-width="1.5" />
-                <text x="395" y="152" font-family="Montserrat" font-size="10" font-weight="700" fill="#E53E3E" text-anchor="middle">LH (Sell)</text>
-
-                <circle cx="445" cy="255" r="5" fill="#E53E3E" stroke="#FFFFFF" stroke-width="1.5" />
-                <text x="445" y="272" font-family="Montserrat" font-size="10" font-weight="700" fill="#E53E3E" text-anchor="middle">New LL</text>
-              </g>
+              <circle cx="445" cy="250" r="5" fill="#E53E3E" />
+              <text x="445" y="266" font-family="Montserrat" font-size="10" font-weight="700" fill="#E53E3E" text-anchor="middle">New LL</text>
             </svg>
 
-            <div class="chart-legend">
-              <div class="legend-item"><div class="legend-dot green"></div> Bullish Trend</div>
-              <div class="legend-item"><div class="legend-dot red"></div> MSS Reversal (Breaks Key HL)</div>
-              <div class="legend-item"><div class="legend-dot blue"></div> Structural Line Overlay</div>
+            <div class="chart-legend-row">
+              <div><span class="legend-dot green"></span> Bullish Trend</div>
+              <div><span class="legend-dot red"></span> MSS Shift (Breaks Key HL)</div>
+              <div><span class="legend-dot navy"></span> Structural Reversal Line</div>
             </div>
           </div>
         </div>
@@ -1228,7 +1117,7 @@
       <section class="slide" id="slide-12">
         <div class="slide-header">
           <div class="slide-title-group">
-            <div class="slide-pretitle">Class Practice</div>
+            <div class="slide-pretitle">Interactive Practice</div>
             <h2 class="slide-title">Quick Practice: Spot The Structure!</h2>
             <div class="title-underline"></div>
           </div>
@@ -1237,162 +1126,161 @@
           </div>
         </div>
 
-        <div style="margin-bottom: 12px; display: flex; justify-content: space-between; align-items: center;">
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 14px;">
           <div style="font-size: 15px; color: var(--navy-primary); font-weight: 600;">
-            Question: <em>Look at these candlesticks. Where are the Swings, the BOS, and the MSS?</em>
+            Question: <em>Analyze the chart below. Can you locate the Swings (HH/HL), the BOS, and the MSS?</em>
           </div>
 
-          <div class="interactive-controls">
-            <button class="interactive-toggle-btn" onclick="toggleInteractiveLayer('layerSwings', this)">1. Show Swings (HH/HL)</button>
-            <button class="interactive-toggle-btn" onclick="toggleInteractiveLayer('layerBOS', this)">2. Show BOS</button>
-            <button class="interactive-toggle-btn" onclick="toggleInteractiveLayer('layerCHoCH', this)">3. Show MSS Shift</button>
-            <button class="interactive-toggle-btn" onclick="revealAllInteractiveLayers()">Reveal All</button>
-            <button class="interactive-toggle-btn" onclick="resetInteractiveLayers()">Reset</button>
+          <div class="interactive-toolbar">
+            <button class="quiz-btn" onclick="toggleInteractiveLayer('layerSwings', this)">1. Show Swings (HH/HL)</button>
+            <button class="quiz-btn" onclick="toggleInteractiveLayer('layerBOS', this)">2. Show BOS</button>
+            <button class="quiz-btn" onclick="toggleInteractiveLayer('layerCHoCH', this)">3. Show MSS Shift</button>
+            <button class="quiz-btn" onclick="revealAllInteractiveLayers()">Reveal All</button>
+            <button class="quiz-btn" onclick="resetInteractiveLayers()">Reset</button>
           </div>
         </div>
 
-        <div class="chart-container" style="padding: 12px;">
-          <svg viewBox="0 0 1000 320" class="interactive-chart-svg">
+        <div class="chart-box" style="padding: 16px;">
+          <svg viewBox="0 0 1000 310" width="100%" height="270">
             <!-- Grid Lines -->
-            <line x1="50" y1="260" x2="950" y2="260" stroke="#F1F5F9" stroke-width="1.5" />
-            <line x1="50" y1="180" x2="950" y2="180" stroke="#F1F5F9" stroke-width="1.5" />
-            <line x1="50" y1="100" x2="950" y2="100" stroke="#F1F5F9" stroke-width="1.5" />
+            <line x1="40" y1="250" x2="960" y2="250" stroke="#F1F5F9" stroke-width="1.5" />
+            <line x1="40" y1="175" x2="960" y2="175" stroke="#F1F5F9" stroke-width="1.5" />
+            <line x1="40" y1="100" x2="960" y2="100" stroke="#F1F5F9" stroke-width="1.5" />
 
-            <!-- BASE LAYER: FULL JAPANESE CANDLESTICKS -->
+            <!-- BASE LAYER: FULL CANDLESTICK CHART -->
             <g id="layerPracticeCandles">
-              <!-- Leg 1: Low (x=70, y=245) to High (x=160, y=145) -->
-              <line x1="70" y1="220" x2="70" y2="248" class="candle-wick green" />
-              <rect x="64" y="225" width="12" height="20" rx="1.5" class="candle-body green" />
+              <!-- Leg 1: Low (x=70, y=240) to High (x=160, y=140) -->
+              <line x1="70" y1="215" x2="70" y2="245" class="candle-wick green" />
+              <rect x="64" y="220" width="12" height="20" rx="1.5" class="candle-body green" />
 
-              <line x1="100" y1="185" x2="100" y2="225" class="candle-wick green" />
-              <rect x="94" y="190" width="12" height="30" rx="1.5" class="candle-body green" />
+              <line x1="100" y1="180" x2="100" y2="220" class="candle-wick green" />
+              <rect x="94" y="185" width="12" height="30" rx="1.5" class="candle-body green" />
 
-              <line x1="130" y1="160" x2="130" y2="195" class="candle-wick green" />
-              <rect x="124" y="165" width="12" height="26" rx="1.5" class="candle-body green" />
+              <line x1="130" y1="155" x2="130" y2="190" class="candle-wick green" />
+              <rect x="124" y="160" width="12" height="26" rx="1.5" class="candle-body green" />
 
-              <line x1="160" y1="145" x2="160" y2="175" class="candle-wick green" />
-              <rect x="154" y="150" width="12" height="20" rx="1.5" class="candle-body green" />
+              <line x1="160" y1="140" x2="160" y2="170" class="candle-wick green" />
+              <rect x="154" y="145" width="12" height="20" rx="1.5" class="candle-body green" />
 
-              <!-- Leg 2: Pullback to HL 1 (x=230, y=198) -->
-              <line x1="195" y1="155" x2="195" y2="182" class="candle-wick red" />
-              <rect x="189" y="158" width="12" height="20" rx="1.5" class="candle-body red" />
+              <!-- Leg 2: Pullback to HL 1 (x=230, y=190) -->
+              <line x1="195" y1="150" x2="195" y2="178" class="candle-wick red" />
+              <rect x="189" y="154" width="12" height="20" rx="1.5" class="candle-body red" />
 
-              <line x1="230" y1="172" x2="230" y2="198" class="candle-wick green" />
-              <rect x="224" y="175" width="12" height="12" rx="1.5" class="candle-body green" />
+              <line x1="230" y1="168" x2="230" y2="192" class="candle-wick green" />
+              <rect x="224" y="170" width="12" height="14" rx="1.5" class="candle-body green" />
 
-              <!-- Leg 3: Expansion to HH 1 (x=340, y=100) + BOS 1 -->
-              <line x1="265" y1="145" x2="265" y2="178" class="candle-wick green" />
-              <rect x="259" y="150" width="12" height="24" rx="1.5" class="candle-body green" />
+              <!-- Leg 3: Expansion to HH 1 (x=340, y=95) + BOS 1 -->
+              <line x1="265" y1="140" x2="265" y2="172" class="candle-wick green" />
+              <rect x="259" y="145" width="12" height="24" rx="1.5" class="candle-body green" />
 
-              <line x1="300" y1="118" x2="300" y2="155" class="candle-wick green" />
-              <rect x="294" y="122" width="12" height="28" rx="1.5" class="candle-body green" />
+              <line x1="300" y1="112" x2="300" y2="150" class="candle-wick green" />
+              <rect x="294" y="116" width="12" height="28" rx="1.5" class="candle-body green" />
 
-              <line x1="340" y1="100" x2="340" y2="130" class="candle-wick green" />
-              <rect x="334" y="105" width="12" height="20" rx="1.5" class="candle-body green" />
+              <line x1="340" y1="95" x2="340" y2="125" class="candle-wick green" />
+              <rect x="334" y="100" width="12" height="20" rx="1.5" class="candle-body green" />
 
-              <!-- Leg 4: Pullback to HL 2 (x=410, y=155) -->
-              <line x1="375" y1="110" x2="375" y2="138" class="candle-wick red" />
-              <rect x="369" y="114" width="12" height="20" rx="1.5" class="candle-body red" />
+              <!-- Leg 4: Pullback to Key HL 2 (x=410, y=150) -->
+              <line x1="375" y1="105" x2="375" y2="132" class="candle-wick red" />
+              <rect x="369" y="108" width="12" height="20" rx="1.5" class="candle-body red" />
 
-              <line x1="410" y1="135" x2="410" y2="158" class="candle-wick green" />
-              <rect x="404" y="138" width="12" height="12" rx="1.5" class="candle-body green" />
+              <line x1="410" y1="130" x2="410" y2="152" class="candle-wick green" />
+              <rect x="404" y="132" width="12" height="14" rx="1.5" class="candle-body green" />
 
-              <!-- Leg 5: Expansion to HH 2 Peak (x=520, y=60) + BOS 2 -->
-              <line x1="445" y1="110" x2="445" y2="142" class="candle-wick green" />
-              <rect x="439" y="115" width="12" height="24" rx="1.5" class="candle-body green" />
+              <!-- Leg 5: Expansion to HH 2 Peak (x=520, y=55) + BOS 2 -->
+              <line x1="445" y1="105" x2="445" y2="138" class="candle-wick green" />
+              <rect x="439" y="110" width="12" height="24" rx="1.5" class="candle-body green" />
 
-              <line x1="480" y1="80" x2="480" y2="118" class="candle-wick green" />
-              <rect x="474" y="85" width="12" height="28" rx="1.5" class="candle-body green" />
+              <line x1="480" y1="75" x2="480" y2="112" class="candle-wick green" />
+              <rect x="474" y="80" width="12" height="28" rx="1.5" class="candle-body green" />
 
-              <line x1="520" y1="60" x2="520" y2="92" class="candle-wick green" />
-              <rect x="514" y="65" width="12" height="22" rx="1.5" class="candle-body green" />
+              <line x1="520" y1="55" x2="520" y2="88" class="candle-wick green" />
+              <rect x="514" y="60" width="12" height="22" rx="1.5" class="candle-body green" />
 
-              <!-- Leg 6: MSS Breakdown through HL 2 (y=155) -->
-              <line x1="555" y1="75" x2="555" y2="115" class="candle-wick red" />
-              <rect x="549" y="80" width="12" height="30" rx="1.5" class="candle-body red" />
+              <!-- Leg 6: Bearish Shift & Breakdown past Key HL (y=150) -->
+              <line x1="555" y1="70" x2="555" y2="110" class="candle-wick red" />
+              <rect x="549" y="75" width="12" height="30" rx="1.5" class="candle-body red" />
 
-              <line x1="585" y1="110" x2="585" y2="150" class="candle-wick red" />
-              <rect x="579" y="115" width="12" height="30" rx="1.5" class="candle-body red" />
+              <line x1="585" y1="105" x2="585" y2="145" class="candle-wick red" />
+              <rect x="579" y="110" width="12" height="30" rx="1.5" class="candle-body red" />
 
               <!-- THE MSS CANDLE -->
-              <line x1="615" y1="145" x2="615" y2="205" class="candle-wick red" stroke-width="2.5" />
-              <rect x="607" y="150" width="16" height="50" rx="2" class="candle-body red" />
+              <line x1="615" y1="140" x2="615" y2="200" class="candle-wick red" stroke-width="2.5" />
+              <rect x="607" y="145" width="16" height="50" rx="2" class="candle-body red" />
 
               <!-- Leg 7: LH Bounce and Drop to LL -->
-              <line x1="650" y1="145" x2="650" y2="180" class="candle-wick green" />
-              <rect x="644" y="150" width="12" height="25" rx="1.5" class="candle-body green" />
+              <line x1="650" y1="140" x2="650" y2="175" class="candle-wick green" />
+              <rect x="644" y="145" width="12" height="25" rx="1.5" class="candle-body green" />
 
-              <line x1="680" y1="125" x2="680" y2="155" class="candle-wick red" />
-              <rect x="674" y="130" width="12" height="18" rx="1.5" class="candle-body red" />
+              <line x1="680" y1="120" x2="680" y2="150" class="candle-wick red" />
+              <rect x="674" y="125" width="12" height="18" rx="1.5" class="candle-body red" />
 
-              <line x1="720" y1="150" x2="720" y2="195" class="candle-wick red" />
-              <rect x="714" y="155" width="12" height="35" rx="1.5" class="candle-body red" />
+              <line x1="720" y1="145" x2="720" y2="190" class="candle-wick red" />
+              <rect x="714" y="150" width="12" height="35" rx="1.5" class="candle-body red" />
 
-              <line x1="770" y1="190" x2="770" y2="245" class="candle-wick red" />
-              <rect x="764" y="195" width="12" height="45" rx="1.5" class="candle-body red" />
+              <line x1="770" y1="185" x2="770" y2="240" class="candle-wick red" />
+              <rect x="764" y="190" width="12" height="45" rx="1.5" class="candle-body red" />
 
-              <line x1="820" y1="200" x2="820" y2="235" class="candle-wick green" />
-              <rect x="814" y="205" width="12" height="24" rx="1.5" class="candle-body green" />
+              <line x1="820" y1="195" x2="820" y2="230" class="candle-wick green" />
+              <rect x="814" y="200" width="12" height="24" rx="1.5" class="candle-body green" />
 
-              <line x1="860" y1="185" x2="860" y2="215" class="candle-wick red" />
-              <rect x="854" y="190" width="12" height="18" rx="1.5" class="candle-body red" />
+              <line x1="860" y1="180" x2="860" y2="210" class="candle-wick red" />
+              <rect x="854" y="185" width="12" height="18" rx="1.5" class="candle-body red" />
 
-              <line x1="910" y1="220" x2="910" y2="275" class="candle-wick red" />
-              <rect x="904" y="225" width="12" height="45" rx="1.5" class="candle-body red" />
+              <line x1="910" y1="215" x2="910" y2="270" class="candle-wick red" />
+              <rect x="904" y="220" width="12" height="45" rx="1.5" class="candle-body red" />
             </g>
 
-            <!-- LAYER 1: SWINGS (Initially Hidden, Toggled by Button) -->
+            <!-- INTERACTIVE LAYER 1: SWINGS -->
             <g id="layerSwings" style="display: none;">
-              <!-- Overlay Structural Zigzag Line -->
-              <polyline points="70,245 160,145 230,198 340,100 410,155 520,60 615,200 680,125 770,245 860,185 910,270" 
-                        class="structure-zigzag" stroke="#0D1F3C" stroke-width="3" />
+              <polyline points="70,240 160,140 230,192 340,95 410,150 520,55 615,195 680,120 770,240 860,180 910,265" 
+                        class="zigzag-line" stroke="#0D1F3C" stroke-width="3" />
 
-              <circle cx="70" cy="245" r="5" fill="#00A868" />
-              <text x="70" y="268" font-family="Montserrat" font-size="11" font-weight="700" fill="#00A868" text-anchor="middle">Low</text>
+              <circle cx="70" cy="240" r="5" fill="#00A868" />
+              <text x="70" y="262" font-family="Montserrat" font-size="11" font-weight="700" fill="#00A868" text-anchor="middle">Low</text>
 
-              <circle cx="160" cy="145" r="5" fill="#00A868" />
-              <text x="160" y="132" font-family="Montserrat" font-size="11" font-weight="700" fill="#00A868" text-anchor="middle">High</text>
+              <circle cx="160" cy="140" r="5" fill="#00A868" />
+              <text x="160" y="128" font-family="Montserrat" font-size="11" font-weight="700" fill="#00A868" text-anchor="middle">High</text>
 
-              <circle cx="230" cy="198" r="6" fill="#00A868" stroke="#FFFFFF" stroke-width="1.5" />
-              <rect x="208" y="210" width="44" height="20" rx="4" fill="#E6F7F0" stroke="#00A868" stroke-width="1.5" />
-              <text x="230" y="224" font-family="Montserrat" font-size="10" font-weight="800" fill="#00A868" text-anchor="middle">HL 1</text>
+              <circle cx="230" cy="192" r="5.5" fill="#00A868" stroke="#FFFFFF" stroke-width="1.5" />
+              <rect x="210" y="202" width="40" height="18" rx="4" fill="#E6F7F0" stroke="#00A868" stroke-width="1.2" />
+              <text x="230" y="215" font-family="Montserrat" font-size="10" font-weight="800" fill="#00A868" text-anchor="middle">HL 1</text>
 
-              <circle cx="340" cy="100" r="6" fill="#00A868" stroke="#FFFFFF" stroke-width="1.5" />
-              <rect x="318" y="70" width="44" height="20" rx="4" fill="#E6F7F0" stroke="#00A868" stroke-width="1.5" />
-              <text x="340" y="84" font-family="Montserrat" font-size="10" font-weight="800" fill="#00A868" text-anchor="middle">HH 1</text>
+              <circle cx="340" cy="95" r="5.5" fill="#00A868" stroke="#FFFFFF" stroke-width="1.5" />
+              <rect x="320" y="65" width="40" height="18" rx="4" fill="#E6F7F0" stroke="#00A868" stroke-width="1.2" />
+              <text x="340" y="78" font-family="Montserrat" font-size="10" font-weight="800" fill="#00A868" text-anchor="middle">HH 1</text>
 
-              <circle cx="410" cy="155" r="7" fill="#00A868" stroke="#0D1F3C" stroke-width="2" />
-              <rect x="385" y="170" width="50" height="20" rx="4" fill="#E6F7F0" stroke="#00A868" stroke-width="1.5" />
-              <text x="410" y="184" font-family="Montserrat" font-size="10" font-weight="800" fill="#00A868" text-anchor="middle">KEY HL 2</text>
+              <circle cx="410" cy="150" r="6" fill="#00A868" stroke="#0D1F3C" stroke-width="2" />
+              <rect x="382" y="162" width="56" height="18" rx="4" fill="#E6F7F0" stroke="#00A868" stroke-width="1.2" />
+              <text x="410" y="175" font-family="Montserrat" font-size="10" font-weight="800" fill="#00A868" text-anchor="middle">KEY HL 2</text>
 
-              <circle cx="520" cy="60" r="7" fill="#00A868" stroke="#FFFFFF" stroke-width="1.5" />
-              <rect x="495" y="30" width="50" height="20" rx="4" fill="#E6F7F0" stroke="#00A868" stroke-width="1.5" />
-              <text x="520" y="44" font-family="Montserrat" font-size="10" font-weight="800" fill="#00A868" text-anchor="middle">HH 2 (Top)</text>
+              <circle cx="520" cy="55" r="6" fill="#00A868" stroke="#FFFFFF" stroke-width="1.5" />
+              <rect x="492" y="25" width="56" height="18" rx="4" fill="#E6F7F0" stroke="#00A868" stroke-width="1.2" />
+              <text x="520" y="38" font-family="Montserrat" font-size="10" font-weight="800" fill="#00A868" text-anchor="middle">HH 2 (Top)</text>
 
-              <circle cx="680" cy="125" r="6" fill="#E53E3E" stroke="#FFFFFF" stroke-width="1.5" />
-              <rect x="658" y="95" width="44" height="20" rx="4" fill="#FEE2E2" stroke="#E53E3E" stroke-width="1.5" />
-              <text x="680" y="109" font-family="Montserrat" font-size="10" font-weight="800" fill="#E53E3E" text-anchor="middle">LH 1</text>
+              <circle cx="680" cy="120" r="5.5" fill="#E53E3E" stroke="#FFFFFF" stroke-width="1.5" />
+              <rect x="660" y="90" width="40" height="18" rx="4" fill="#FEE2E2" stroke="#E53E3E" stroke-width="1.2" />
+              <text x="680" y="103" font-family="Montserrat" font-size="10" font-weight="800" fill="#E53E3E" text-anchor="middle">LH 1</text>
 
-              <circle cx="770" cy="245" r="6" fill="#E53E3E" stroke="#FFFFFF" stroke-width="1.5" />
-              <rect x="748" y="258" width="44" height="20" rx="4" fill="#FEE2E2" stroke="#E53E3E" stroke-width="1.5" />
-              <text x="770" y="272" font-family="Montserrat" font-size="10" font-weight="800" fill="#E53E3E" text-anchor="middle">LL 1</text>
+              <circle cx="770" cy="240" r="5.5" fill="#E53E3E" stroke="#FFFFFF" stroke-width="1.5" />
+              <rect x="750" y="252" width="40" height="18" rx="4" fill="#FEE2E2" stroke="#E53E3E" stroke-width="1.2" />
+              <text x="770" y="265" font-family="Montserrat" font-size="10" font-weight="800" fill="#E53E3E" text-anchor="middle">LL 1</text>
             </g>
 
-            <!-- LAYER 2: BOS (Initially Hidden) -->
+            <!-- INTERACTIVE LAYER 2: BOS -->
             <g id="layerBOS" style="display: none;">
-              <line x1="160" y1="145" x2="340" y2="145" stroke="#00A868" stroke-width="2" stroke-dasharray="5 4" />
-              <text x="250" y="138" font-family="Montserrat" font-size="11" font-weight="800" fill="#00A868">BOS 1 ✓</text>
+              <line x1="160" y1="140" x2="340" y2="140" stroke="#00A868" stroke-width="2" stroke-dasharray="5 4" />
+              <text x="250" y="132" font-family="Montserrat" font-size="11" font-weight="800" fill="#00A868">BOS 1 ✓</text>
 
-              <line x1="340" y1="100" x2="520" y2="100" stroke="#00A868" stroke-width="2" stroke-dasharray="5 4" />
-              <text x="430" y="92" font-family="Montserrat" font-size="11" font-weight="800" fill="#00A868">BOS 2 ✓</text>
+              <line x1="340" y1="95" x2="520" y2="95" stroke="#00A868" stroke-width="2" stroke-dasharray="5 4" />
+              <text x="430" y="87" font-family="Montserrat" font-size="11" font-weight="800" fill="#00A868">BOS 2 ✓</text>
             </g>
 
-            <!-- LAYER 3: MSS (Initially Hidden) -->
+            <!-- INTERACTIVE LAYER 3: MSS -->
             <g id="layerCHoCH" style="display: none;">
-              <line x1="410" y1="155" x2="680" y2="155" stroke="#E53E3E" stroke-width="2.5" stroke-dasharray="6 4" />
-              <circle cx="615" cy="155" r="7" fill="#E53E3E" stroke="#FFFFFF" stroke-width="2" />
-              <rect x="560" y="165" width="110" height="24" rx="4" fill="#FEE2E2" stroke="#E53E3E" stroke-width="1.5" />
-              <text x="615" y="181" font-family="Montserrat" font-size="11" font-weight="800" fill="#E53E3E" text-anchor="middle">MSS SHIFT!</text>
+              <line x1="410" y1="150" x2="680" y2="150" stroke="#E53E3E" stroke-width="2.5" stroke-dasharray="6 4" />
+              <circle cx="615" cy="150" r="7" fill="#E53E3E" stroke="#FFFFFF" stroke-width="2" />
+              <rect x="560" y="160" width="110" height="24" rx="4" fill="#FEE2E2" stroke="#E53E3E" stroke-width="1.5" />
+              <text x="615" y="176" font-family="Montserrat" font-size="11" font-weight="800" fill="#E53E3E" text-anchor="middle">MSS SHIFT!</text>
             </g>
           </svg>
         </div>
@@ -1415,17 +1303,17 @@
           <h1 class="qa-title">Q &amp; A</h1>
           <div class="cover-underline"></div>
           
-          <div style="background: #F8FAFC; border: 1px solid var(--card-border); border-radius: 12px; padding: 18px 30px; margin-bottom: 24px; max-width: 650px; text-align: left;">
-            <div style="font-weight: 700; color: var(--navy-primary); margin-bottom: 8px;">Key Takeaways:</div>
-            <div style="font-size: 14.5px; line-height: 1.6; color: var(--text-dark);">
-              • <strong>Uptrend:</strong> Higher Highs (HH) + Higher Lows (HL) → Look to Buy.<br>
-              • <strong>Downtrend:</strong> Lower Highs (LH) + Lower Lows (LL) → Look to Sell.<br>
-              • <strong>BOS:</strong> Trend continuation.<br>
-              • <strong>MSS:</strong> Trend reversal (broken key low or high).
+          <div class="clean-card" style="margin-bottom: 24px; max-width: 680px; text-align: left; padding: 24px 32px;">
+            <div style="font-weight: 700; color: var(--navy-primary); margin-bottom: 12px; font-size: 16px;">Key Takeaways:</div>
+            <div style="font-size: 15px; line-height: 1.7; color: var(--text-dark);">
+              • <strong>Uptrend:</strong> Higher Highs (HH) + Higher Lows (HL) → Look for Buys.<br>
+              • <strong>Downtrend:</strong> Lower Highs (LH) + Lower Lows (LL) → Look for Sells.<br>
+              • <strong>BOS:</strong> Trend continuation (follow the flow).<br>
+              • <strong>MSS:</strong> Trend reversal (broken key low or high — time to step aside or reverse).
             </div>
           </div>
 
-          <div style="display: flex; gap: 24px; font-size: 14px; font-weight: 700; color: var(--navy-primary);">
+          <div style="display: flex; gap: 24px; font-size: 14px; font-weight: 700; color: var(--navy-primary); text-transform: uppercase; letter-spacing: 0.08em;">
             <span>Trade With The Trend</span>
             <span>•</span>
             <span>Manage Your Risk</span>
@@ -1445,7 +1333,7 @@
     </div><!-- /presentation-stage -->
   </div><!-- /presentation-viewport -->
 
-  <!-- Deck Navigation Controls Bar -->
+  <!-- Deck Floating Navigation Controls -->
   <div class="deck-controls">
     <button class="deck-btn" id="prevBtn" title="Previous Slide (← / PgUp / K)">
       <span>◀</span> Prev
